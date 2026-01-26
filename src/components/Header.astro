@@ -2,20 +2,39 @@
 const brand = "ISO Audit & Training";
 ---
 
-<header style="position:sticky; top:0; z-index:50; backdrop-filter: blur(12px); background: rgba(11,18,32,.55); border-bottom:1px solid rgba(255,255,255,.12);">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:14px 0;">
+<header style="
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+">
+  <div class="container" style="
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+  ">
+    <!-- Логотип -->
     <a href="/" style="display:flex; align-items:center; gap:10px;">
-      <span style="width:34px; height:34px; border-radius:10px; background: linear-gradient(135deg, rgba(34,197,94,.55), rgba(56,189,248,.55)); display:inline-block;"></span>
+      <span style="
+        width:34px;
+        height:34px;
+        border-radius:10px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        display:inline-block;
+      "></span>
       <strong>{brand}</strong>
     </a>
 
-    <nav style="display:flex; gap:14px; align-items:center;">
-      <a href="/services/" style="color:rgba(255,255,255,.78)">Услуги</a>
-      <a href="/standards/iso-9001/" style="color:rgba(255,255,255,.78)">Стандарты</a>
-      <a href="/training/" style="color:rgba(255,255,255,.78)">Обучение</a>
-      <a href="/about/" style="color:rgba(255,255,255,.78)">О компании</a>
+    <!-- Меню -->
+    <nav style="display:flex; gap:18px; align-items:center;">
+      <a href="/services/">Услуги</a>
+      <a href="/standards/">Стандарты</a>
+      <a href="/industries/">Отрасли</a>
+      <a href="/about/">О компании</a>
       <a href="/contact/" class="btn primary">Получить предложение</a>
     </nav>
   </div>
 </header>
-

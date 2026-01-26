@@ -1,29 +1,54 @@
-<footer style="border-top:1px solid rgba(255,255,255,.12); padding:36px 0; margin-top:64px;">
-  <div class="container" style="display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+<footer style="
+  border-top:1px solid var(--line);
+  padding:48px 0;
+  margin-top:72px;
+  background: #ffffff;
+">
+  <div class="container" style="
+    display:flex;
+    justify-content:space-between;
+    gap:32px;
+    flex-wrap:wrap;
+  ">
+    <!-- О компании -->
     <div style="max-width:420px">
-      <strong>ISO Audit & Training</strong>
-      <p class="p">Сертификация ISO, аудит и обучение. Диагностика → план → внедрение → внутренний аудит → готовность к сертификации.</p>
+      <strong style="font-size:16px;">ISO Audit & Training</strong>
+      <p class="p">
+        Сертификация ISO, аудит и обучение персонала.
+        Диагностика → план → внедрение → внутренний аудит → готовность к сертификации.
+      </p>
     </div>
-    <div style="display:flex; gap:36px; flex-wrap:wrap;">
+
+    <!-- Навигация -->
+    <div style="display:flex; gap:48px; flex-wrap:wrap;">
       <div>
-        <div style="font-weight:600; margin-bottom:8px;">Разделы</div>
-        <div style="display:grid; gap:6px;">
-          <a href="/services/" style="color:rgba(255,255,255,.78)">Услуги</a>
-          <a href="/cases/" style="color:rgba(255,255,255,.78)">Кейсы</a>
-          <a href="/faq/" style="color:rgba(255,255,255,.78)">FAQ</a>
-          <a href="/contact/" style="color:rgba(255,255,255,.78)">Контакты</a>
+        <div style="font-weight:600; margin-bottom:10px;">Разделы</div>
+        <div style="display:grid; gap:8px;">
+          <a href="/services/">Услуги</a>
+          <a href="/cases/">Кейсы</a>
+          <a href="/industries/">Отрасли</a>
+          <a href="/contact/">Контакты</a>
         </div>
       </div>
+
       <div>
-        <div style="font-weight:600; margin-bottom:8px;">Документы</div>
-        <div style="display:grid; gap:6px;">
-          <a href="/privacy/" style="color:rgba(255,255,255,.78)">Privacy</a>
-          <a href="/cookies/" style="color:rgba(255,255,255,.78)">Cookies</a>
+        <div style="font-weight:600; margin-bottom:10px;">Документы</div>
+        <div style="display:grid; gap:8px;">
+          <a href="/privacy/">Политика конфиденциальности</a>
+          <a href="/cookies/">Cookies</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top:18px; color:rgba(255,255,255,.55); font-size:13px;">
+
+  <!-- Копирайт -->
+  <div class="container" style="
+    margin-top:28px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    color: var(--muted);
+    font-size:13px;
+  ">
     © {new Date().getFullYear()} ISO Audit & Training. All rights reserved.
   </div>
 </footer>
