@@ -1,7 +1,7 @@
 :root{
   --bg: #ffffff;
   --card: rgba(255,255,255,.06);
-  --text: rgba(255,255,255,.88);
+  --text: rgba(0, 0, 0, 0.88);
   --muted: rgba(255,255,255,.68);
   --line: rgba(255,255,255,.14);
   --accent: #22c55e;
