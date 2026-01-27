@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+const title = "HACCP: Анализ опасностей и критические контрольные точки";
+const desc = "Внедрение HACCP: анализ опасностей, CCP, мониторинг, корректирующие действия, верификация, обучение команды.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">HACCP</div>
+      <h1 class="h1" style="margin-top:12px;">Система HACCP</h1>
+      <p class="p" style="max-width:860px;">
+        HACCP — это практический подход к управлению рисками пищевой безопасности.
+        Мы помогаем создать рабочую систему: команда HACCP, описание продукта, блок-схемы, анализ опасностей,
+        определение CCP, мониторинг, корректирующие действия и верификация.
+      </p>
+
+      <div class="grid" style="margin-top:20px;">
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">7 принципов</div>
+          <div class="p">Опасности → CCP → пределы → мониторинг → корректирующие → верификация → записи.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">Что делаем</div>
+          <div class="p">PRP/гигиена → план HACCP → формы записей → обучение → аудит готовности.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">Результат</div>
+          <div class="p">Контроль критических точек, меньше рисков, готовность к проверкам и клиентским аудитам.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:22px;">
+        <a class="btn primary" href="/contact/">Получить план и стоимость</a>
+        <a class="btn" href="/standards/" style="margin-left:10px;">Все стандарты</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

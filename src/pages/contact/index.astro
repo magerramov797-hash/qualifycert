@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Контакты";
+const desc = "Оставьте заявку на ISO-сертификацию, аудит или обучение. Ответим и отправим план работ и стоимость.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Связаться с нами</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="max-width:860px;">
+        Напишите, какие стандарты/услуги интересуют — мы уточним детали и отправим план работ, сроки и стоимость.
+      </p>
+
+      <div class="grid" style="margin-top:22px;">
+        <!-- Левая колонка -->
+        <div class="card" style="grid-column: span 5;">
+          <div style="font-weight:700; margin-bottom:10px;">Контактные данные</div>
+
+          <div style="display:grid; gap:10px;">
+            <div>
+              <div style="font-size:13px; color: var(--muted);">Телефон</div>
+              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+            </div>
+
+            <div>
+              <div style="font-size:13px; color: var(--muted);">WhatsApp</div>
+              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+            </div>
+
+            <div>
+              <div style="font-size:13px; color: var(--muted);">Email</div>
+              <div style="font-weight:600;">info@qualifycert.com</div>
+            </div>
+
+            <div>
+              <div style="font-size:13px; color: var(--muted);">Город</div>
+              <div style="font-weight:600;">Баку, Азербайджан</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px; border-top:1px solid var(--line); padding-top:14px;">
+            <div style="font-weight:700; margin-bottom:8px;">Что можно запросить</div>
+            <ul style="margin:0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+              <li>План подготовки к ISO и сроки</li>
+              <li>Коммерческое предложение</li>
+              <li>Аудит готовности (gap-анализ)</li>
+              <li>Программа обучения персонала</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="card" style="grid-column: span 7;">
+          <div style="font-weight:700; margin-bottom:10px;">Оставить заявку</div>
+
+          <form method="post">
+            <div class="grid">
+              <div style="grid-column: span 6;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Имя</label>
+                <input name="name" required
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
+                  placeholder="Ваше имя" />
+              </div>
+
+              <div style="grid-column: span 6;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Компания</label>
+                <input name="company"
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
+                  placeholder="Название компании" />
+              </div>
+
+              <div style="grid-column: span 6;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Телефон / WhatsApp</label>
+                <input name="phone" required
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
+                  placeholder="+994..." />
+              </div>
+
+              <div style="grid-column: span 6;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Email</label>
+                <input name="email" type="email"
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
+                  placeholder="email@company.com" />
+              </div>
+
+              <div style="grid-column: span 12;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Интересует</label>
+                <select name="topic"
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; background:#fff;">
+                  <option>Сертификация ISO</option>
+                  <option>Аудит</option>
+                  <option>Обучение</option>
+                  <option>ISO 9001</option>
+                  <option>ISO 14001</option>
+                  <option>ISO 45001</option>
+                  <option>ISO 22000 / HACCP</option>
+                </select>
+              </div>
+
+              <div style="grid-column: span 12;">
+                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Сообщение</label>
+                <textarea name="message" rows="5"
+                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; resize:vertical;"
+                  placeholder="Коротко опишите задачу: отрасль, число сотрудников, сроки..."></textarea>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap;">
+              <button class="btn primary" type="submit">Отправить заявку</button>
+              <a class="btn" href="/services/">Посмотреть услуги</a>
+            </div>
+
+            <p class="p" style="font-size:13px; margin-top:12px;">
+              Нажимая “Отправить заявку”, вы соглашаетесь с обработкой персональных данных.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
