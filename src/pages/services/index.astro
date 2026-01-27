@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Услуги";
+const desc = "Сертификация ISO, аудит и обучение персонала: подготовка, внедрение, сопровождение.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <h1 class="h1">{title}</h1>
+      <p class="p">Выберите направление: сертификация, аудит или обучение. На следующих шагах добавим подробные блоки и формы.</p>
+
+      <div class="grid" style="margin-top:20px;">
+        <a class="card" href="/services/certification/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Сертификация ISO</div>
+          <div class="p">Подготовка к ISO 9001, 14001, 45001, 22000, HACCP.</div>
+        </a>
+
+        <a class="card" href="/services/audit/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Аудит</div>
+          <div class="p">Gap-анализ, внутренние аудиты, подготовка к сертификации.</div>
+        </a>
+
+        <a class="card" href="/services/training/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Обучение</div>
+          <div class="p">Обучение персонала и внутренних аудиторов, практические кейсы.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

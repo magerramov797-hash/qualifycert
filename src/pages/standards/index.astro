@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Стандарты";
+const desc = "ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: внедрение, подготовка к сертификации, аудит и обучение.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <h1 class="h1">{title}</h1>
+      <p class="p">Выберите стандарт. На следующих шагах добавим остальные страницы и сделаем одинаковый “премиум” шаблон для всех стандартов.</p>
+
+      <div class="grid" style="margin-top:20px;">
+        <a class="card" href="/standards/iso-9001/" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 9001</div>
+          <div class="p">Система менеджмента качества: процессы, KPI, риски, удовлетворённость клиента.</div>
+        </a>
+
+        <a class="card" href="/standards/iso-14001/" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 14001</div>
+          <div class="p">Экологический менеджмент: аспекты/воздействия, соответствие требованиям.</div>
+        </a>
+
+        <a class="card" href="/standards/iso-45001/" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 45001</div>
+          <div class="p">Охрана труда и безопасность: риски, обучение, расследования, улучшения.</div>
+        </a>
+
+        <a class="card" href="/standards/iso-22000/" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 22000</div>
+          <div class="p">Пищевая безопасность: PRP/OPRP/CCP, управление опасностями.</div>
+        </a>
+
+        <a class="card" href="/standards/haccp/" style="grid-column: span 4;">
+          <div style="font-weight:700;">HACCP</div>
+          <div class="p">План ХАССП: анализ опасностей, критические точки, мониторинг.</div>
+        </a>
+
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">Другие стандарты</div>
+          <div class="p">При необходимости добавим ISO 27001, ISO 50001 и др.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
