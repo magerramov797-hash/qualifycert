@@ -44,6 +44,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* =========================
    TYPOGRAPHY
    ========================= */
@@ -139,8 +145,12 @@ a:focus-visible {
    ========================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 18px;
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 /* =========================
@@ -151,6 +161,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px;
+  overflow-wrap: anywhere;
   box-shadow: var(--shadow-sm);
 
   transition:
@@ -199,14 +210,53 @@ li {
    RESPONSIVE
    ========================= */
 
+@media (min-width: 1024px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .container {
+    width: min(var(--max), calc(100% - 64px));
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: min(var(--max), calc(100% - 96px));
+  }
+}
+
 /* tablet */
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .grid > * {
+    grid-column: span 1 !important;
+  }
+
+  .grid > *[style*="span 12"] {
+    grid-column: 1 / -1 !important;
   }
 
   .section {
     padding: 56px 0;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  header nav a {
+    font-size: 14px;
   }
 }
 
@@ -214,6 +264,11 @@ li {
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .grid > * {
+    grid-column: 1 / -1 !important;
   }
 
   .section {
@@ -226,6 +281,40 @@ li {
 
   .btn {
     width: 100%;
+  }
+
+  .btn[style*="margin-left"],
+  .btn + .btn {
+    margin-left: 0 !important;
+  }
+
+  header nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav .btn {
+    width: 100%;
+  }
+
+  .kicker,
+  .kicker[style*="white-space"] {
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .btn {
+    padding: 12px 14px;
   }
 }
 
