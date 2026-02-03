@@ -10,37 +10,49 @@ const brand = "QualifyCert";
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 ">
-  <div class="container" style="
+  <div class="container header-wrap" style="
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 14px 0;
+    gap: 12px;
   ">
-<!-- Логотип -->
-<a href="/" style="display:flex; align-items:center; gap:10px;">
-  <img
-    src="/images/logo.png"
-    alt="ISO Audit & Training"
-    style="
-      height:48px;
-      width:auto;
-      display:block;
-    "
-  />
-  <strong>{brand}</strong>
-</a>
 
+    <!-- Логотип -->
+    <a href="/" style="display:flex; align-items:center; gap:10px;">
+      <img
+        src="/images/logo.png"
+        alt="QualifyCert"
+        style="height:48px; width:auto; display:block;"
+      />
+      <strong>{brand}</strong>
+    </a>
 
-    <!-- Меню -->
-    <nav style="display:flex; gap:18px; align-items:center;">
+    <!-- DESKTOP меню -->
+    <nav class="nav-desktop" style="display:flex; gap:18px; align-items:center;">
       <a href="/services/">Услуги</a>
       <a href="/standards/">Стандарты</a>
       <a href="/industries/">Отрасли</a>
-      <a href="/insights/">insights</a>
+      <a href="/insights/">Insights</a>
       <a href="/faq/">FAQ</a>
       <a href="/about/">О компании</a>
-      <a href="/faq/">FAQ</a>
       <a href="/contact/" class="btn primary">Получить предложение</a>
     </nav>
+
+    <!-- MOBILE меню (без JS) -->
+    <details class="nav-mobile">
+      <summary class="btn">Меню</summary>
+
+      <div class="mobile-panel">
+        <a href="/services/">Услуги</a>
+        <a href="/standards/">Стандарты</a>
+        <a href="/industries/">Отрасли</a>
+        <a href="/insights/">Insights</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/">О компании</a>
+        <a href="/contact/" class="btn primary" style="justify-content:center;">Получить предложение</a>
+      </div>
+    </details>
+
   </div>
 </header>

@@ -83,6 +83,11 @@ img {
   padding: 64px 0;
 }
 
+/attachable helper for sticky headers (optional) */
+main {
+  display: block;
+}
+
 /* =========================
    LINKS & BUTTONS
    ========================= */
@@ -135,7 +140,8 @@ a:hover {
 
 /* focus accessibility */
 .btn:focus-visible,
-a:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 3px solid rgba(37,99,235,.35);
   outline-offset: 2px;
 }
@@ -198,32 +204,69 @@ a:focus-visible {
 /* =========================
    LISTS
    ========================= */
-ul {
-  margin: 0;
+ul { margin: 0; }
+li { line-height: 1.5; }
+
+/* =========================
+   HEADER MOBILE MENU (no JS)
+   ========================= */
+.nav-desktop {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
-li {
-  line-height: 1.5;
+.nav-mobile {
+  display: none;
+  position: relative;
+}
+
+.nav-mobile > summary {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+.nav-mobile > summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+
+  width: min(320px, calc(100vw - 24px));
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-panel a {
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.mobile-panel a:hover {
+  border-color: rgba(37, 99, 235, .18);
+  background: rgba(37, 99, 235, .04);
 }
 
 /* =========================
    RESPONSIVE
    ========================= */
-
 @media (min-width: 1024px) {
-  .section {
-    padding: 72px 0;
-  }
-
-  .container {
-    width: min(var(--max), calc(100% - 64px));
-  }
+  .section { padding: 72px 0; }
+  .container { width: min(var(--max), calc(100% - 64px)); }
 }
 
 @media (min-width: 1280px) {
-  .container {
-    width: min(var(--max), calc(100% - 96px));
-  }
+  .container { width: min(var(--max), calc(100% - 96px)); }
 }
 
 /* tablet */
@@ -233,31 +276,19 @@ li {
     gap: 16px;
   }
 
+  /* IMPORTANT: neutralize inline grid-column spans on small screens */
   .grid > * {
     grid-column: span 1 !important;
   }
-
   .grid > *[style*="span 12"] {
     grid-column: 1 / -1 !important;
   }
 
-  .section {
-    padding: 56px 0;
-  }
+  .section { padding: 56px 0; }
 
-  header .container {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  header nav {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  header nav a {
-    font-size: 14px;
-  }
+  /* Header menu switch */
+  .nav-desktop { display: none !important; }
+  .nav-mobile { display: block !important; }
 }
 
 /* mobile */
@@ -271,32 +302,10 @@ li {
     grid-column: 1 / -1 !important;
   }
 
-  .section {
-    padding: 48px 0;
-  }
+  .section { padding: 48px 0; }
+  .container { width: calc(100% - 32px); }
 
-  .container {
-    width: calc(100% - 32px);
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .btn[style*="margin-left"],
-  .btn + .btn {
-    margin-left: 0 !important;
-  }
-
-  header nav {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav .btn {
-    width: 100%;
-  }
+  .btn { width: 100%; }
 
   .kicker,
   .kicker[style*="white-space"] {
@@ -305,31 +314,14 @@ li {
 }
 
 @media (max-width: 420px) {
-  .container {
-    width: calc(100% - 24px);
-  }
-
-  .section {
-    padding: 40px 0;
-  }
-
-  .btn {
-    padding: 12px 14px;
-  }
+  .container { width: calc(100% - 24px); }
+  .section { padding: 40px 0; }
+  .btn { padding: 12px 14px; }
 }
 
-/* =========================
-   REDUCED MOTION
-   ========================= */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-  }
-}
 /* =========================
    REVEAL ANIMATIONS (safe)
    ========================= */
-
 .reveal {
   opacity: 0;
   transform: translateY(10px);
@@ -342,22 +334,25 @@ li {
   transform: none;
 }
 
-/* варианты (по желанию) */
+/* direction variants */
 .reveal.reveal-up   { transform: translateY(12px); }
 .reveal.reveal-down { transform: translateY(-12px); }
 .reveal.reveal-left { transform: translateX(12px); }
 .reveal.reveal-right{ transform: translateX(-12px); }
 
-/* задержки (по желанию) */
+/* delays */
 .delay-1 { transition-delay: .06s; }
 .delay-2 { transition-delay: .12s; }
 .delay-3 { transition-delay: .18s; }
 
-/* если человек отключил анимации */
+/* =========================
+   REDUCED MOTION
+   ========================= */
 @media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+
   .reveal {
     opacity: 1 !important;
     transform: none !important;
-    transition: none !important;
   }
 }
