@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Отрасли";
+const desc = "Внедрение ISO и подготовка к сертификации по отраслям: производство, пищевка, строительство, услуги, логистика.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Подходим под отрасль</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="max-width:900px;">
+        У каждой отрасли свои риски, требования и типичные несоответствия. Мы адаптируем систему менеджмента под ваш контекст,
+        процессы и реальную работу на площадке.
+      </p>
+
+      <div class="grid" style="margin-top:22px;">
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Производство</div>
+          <div class="p">Процессы, контроль качества, управление изменениями, несоответствия, CAPA.</div>
+        </a>
+
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Пищевая отрасль</div>
+          <div class="p">ISO 22000/HACCP, PRP, гигиена, трассируемость, аудит готовности.</div>
+        </a>
+
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Строительство</div>
+          <div class="p">ISO 9001/14001/45001, охрана труда, контроль подрядчиков, документация.</div>
+        </a>
+
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Логистика и склад</div>
+          <div class="p">Безопасность работ, обучение, контроль процессов, претензии, улучшения.</div>
+        </a>
+
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">Услуги и офис</div>
+          <div class="p">Процессы, SLA, риски, клиентский опыт, внутренние аудиты.</div>
+        </a>
+
+        <a class="card" href="/contact/" style="grid-column: span 4;">
+          <div style="font-weight:700;">HoReCa</div>
+          <div class="p">Пищевая безопасность, санитария, обучение персонала, чек-листы.</div>
+        </a>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <div style="font-weight:700;">Что вы получите</div>
+        <div class="grid" style="margin-top:10px;">
+          <div style="grid-column: span 4;">
+            <div style="font-weight:700;">План работ</div>
+            <div class="p">Сроки, этапы, ответственные и перечень документов.</div>
+          </div>
+          <div style="grid-column: span 4;">
+            <div style="font-weight:700;">Шаблоны и инструменты</div>
+            <div class="p">Политики, процедуры, чек-листы, журналы и формы.</div>
+          </div>
+          <div style="grid-column: span 4;">
+            <div style="font-weight:700;">Готовность к аудиту</div>
+            <div class="p">Внутренний аудит, CAPA и подготовка к сертификации.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="/contact/">Получить консультацию</a>
+          <a class="btn" href="/services/">Наши услуги</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

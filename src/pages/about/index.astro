@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "О компании";
+const desc =
+  "Консалтинг по ISO: сертификация, аудит и обучение. Практичный подход, понятные процессы, измеримый результат.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Экспертиза • Практика • Результат</div>
+
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
+      <p class="p" style="max-width:900px;">
+        Мы помогаем компаниям внедрять и поддерживать системы менеджмента по международным стандартам ISO так,
+        чтобы они реально работали в бизнесе, а не существовали только «для сертификата».
+      </p>
+
+      <div class="grid" style="margin-top:22px;">
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">Чем занимаемся</div>
+          <p class="p">
+            Сертификация ISO, внутренние и предсертификационные аудиты,
+            обучение персонала и внедрение систем менеджмента.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">Наш подход</div>
+          <p class="p">
+            Начинаем с диагностики, затем строим систему под процессы компании,
+            обучаем сотрудников и проверяем результативность через аудит.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">Что получает клиент</div>
+          <p class="p">
+            Понятные процессы, управляемые риски, готовность к аудитам,
+            доверие клиентов и партнёров.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div style="font-weight:800; margin-bottom:10px;">Как мы работаем</div>
+
+        <div class="grid">
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">1) Диагностика</div>
+            <div class="p">Анализ процессов, рисков, требований стандартов.</div>
+          </div>
+
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">2) План</div>
+            <div class="p">Этапы, сроки, ответственность и перечень документов.</div>
+          </div>
+
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">3) Внедрение</div>
+            <div class="p">Документация, процессы, обучение персонала.</div>
+          </div>
+
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">4) Проверка</div>
+            <div class="p">Внутренний аудит, корректирующие действия, готовность.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div style="font-weight:800;">Почему нам доверяют</div>
+        <ul
+          style="
+            margin:10px 0 0;
+            padding-left:18px;
+            color: var(--muted);
+            display:grid;
+            gap:6px;
+          "
+        >
+          <li>Практический опыт внедрения ISO в разных отраслях</li>
+          <li>Фокус на реальную работу системы, а не формальность</li>
+          <li>Понятный язык без лишней бюрократии</li>
+          <li>Сопровождение до полной готовности к аудиту</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="/contact/">Получить консультацию</a>
+        <a class="btn" href="/services/">Наши услуги</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
