@@ -1,3 +1,13 @@
+﻿---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { translations } from "../i18n/translations";
+
+const { lang = "az", currentPath = "/" } = Astro.props;
+const t = translations[lang];
+const prefix = lang === "az" ? "" : `/${lang}`;
+const link = (path) => `${prefix}${path === "/" ? "/" : path}`;
+---
+
 <footer style="
   border-top:1px solid var(--line);
   padding:48px 0;
@@ -12,40 +22,42 @@
   ">
     <!-- О компании -->
     <div style="max-width:420px">
-      <strong style="font-size:16px;">QualifyCert</strong>
+      <strong style="font-size:16px;">{t.footer.aboutTitle}</strong>
       <p class="p">
-        Сертификация ISO, аудит и обучение персонала.
-        Диагностика → план → внедрение → внутренний аудит → готовность к сертификации.
+        {t.footer.aboutText}
       </p>
+      <div style="margin-top:14px;">
+        <LanguageSwitcher currentLang={lang} currentPath={currentPath} />
+      </div>
     </div>
 
     <!-- Навигация -->
     <div style="display:flex; gap:48px; flex-wrap:wrap;">
       <div>
-        <div style="font-weight:600; margin-bottom:10px;">Разделы</div>
+        <div style="font-weight:600; margin-bottom:10px;">{t.footer.sectionsTitle}</div>
         <div style="display:grid; gap:8px;">
-          <a href="/services/">Услуги</a>
-          <a href="/standards/">Стандарты</a>
-          <a href="/industries/">Отрасли</a>
-          <a href="/insights/">Экспертиза</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/contact/">Контакты</a>
+          <a href={link("/services/")}>{t.nav.services}</a>
+          <a href={link("/standards/")}>{t.nav.standards}</a>
+          <a href={link("/industries/")}>{t.nav.industries}</a>
+          <a href={link("/insights/")}>{t.nav.insights}</a>
+          <a href={link("/faq/")}>{t.nav.faq}</a>
+          <a href={link("/contact/")}>{t.nav.contact}</a>
         </div>
       </div>
 
       <div>
-        <div style="font-weight:600; margin-bottom:10px;">Insights</div>
+        <div style="font-weight:600; margin-bottom:10px;">{t.footer.insightsTitle}</div>
         <div style="display:grid; gap:8px;">
-          <a href="/insights/blog/">Блог</a>
-          <a href="/insights/cases/">Кейсы</a>
+          <a href={link("/insights/blog/")}>{t.footer.blog}</a>
+          <a href={link("/insights/cases/")}>{t.footer.cases}</a>
         </div>
       </div>
 
       <div>
-        <div style="font-weight:600; margin-bottom:10px;">Документы</div>
+        <div style="font-weight:600; margin-bottom:10px;">{t.footer.documentsTitle}</div>
         <div style="display:grid; gap:8px;">
-          <a href="/privacy/">Политика конфиденциальности</a>
-          <a href="/cookies/">Cookies</a>
+          <a href={link("/privacy/")}>{t.footer.privacy}</a>
+          <a href={link("/cookies/")}>{t.footer.cookies}</a>
         </div>
       </div>
     </div>
@@ -59,6 +71,6 @@
     color: var(--muted);
     font-size:13px;
   ">
-    © {new Date().getFullYear()} QualifyCert. All rights reserved.
+    © {new Date().getFullYear()} QualifyCert. {t.footer.rights}
   </div>
 </footer>

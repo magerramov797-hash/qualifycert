@@ -1,0 +1,61 @@
+---
+const { currentLang = "az", currentPath = "/" } = Astro.props;
+
+const knownPaths = new Set([
+  "/",
+  "/services/",
+  "/services/certification/",
+  "/services/audit/",
+  "/services/training/",
+  "/training/",
+  "/standards/",
+  "/standards/iso-9001/",
+  "/standards/iso-14001/",
+  "/standards/iso-45001/",
+  "/standards/iso-22000/",
+  "/standards/haccp/",
+  "/insights/",
+  "/insights/blog/",
+  "/insights/cases/",
+  "/faq/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/cookies/",
+  "/thank-you/",
+  "/industries/"
+]);
+
+const normalizedPath =
+  typeof currentPath === "string" && currentPath.trim().length > 0
+    ? currentPath
+    : "/";
+
+const basePath = knownPaths.has(normalizedPath) ? normalizedPath : "/";
+
+const linkFor = (lang) => {
+  if (lang === "az") return basePath;
+  return `/${lang}${basePath === "/" ? "/" : basePath}`;
+};
+---
+
+<div
+  class="lang-switch"
+  style="
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-size:12px;
+    font-weight:600;
+  "
+>
+  <a href={linkFor("az")} style={currentLang === "az" ? "color: var(--accent);" : ""}>AZ</a>
+  <span style="opacity:.45;">|</span>
+  <a href={linkFor("ru")} style={currentLang === "ru" ? "color: var(--accent);" : ""}>RU</a>
+  <span style="opacity:.45;">|</span>
+  <a href={linkFor("en")} style={currentLang === "en" ? "color: var(--accent);" : ""}>EN</a>
+</div>

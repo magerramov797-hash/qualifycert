@@ -1,21 +1,21 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const title = "Спасибо за заявку";
-const desc = "Мы получили вашу заявку и свяжемся с вами в ближайшее время.";
+const title = "Sorğu qəbul olundu";
+const desc = "Müraciətiniz üçün təşəkkürlər. Tezliklə sizinlə əlaqə saxlayacağıq.";
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">Спасибо</div>
+      <div class="kicker">Təşəkkürlər</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:820px;">
-        Мы свяжемся с вами, чтобы уточнить детали и подготовить предложение.
+      <p class="p" style="max-width:780px;">
+        Sorğunuzu aldıq və ən qısa zamanda geri dönüş edəcəyik.
       </p>
 
-      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/services/">Смотреть услуги</a>
-        <a class="btn" href="/contact/">Связаться с нами</a>
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="/services/">Xidmətlərə baxın</a>
+        <a class="btn" href="/contact/">Bizimlə əlaqə</a>
       </div>
     </div>
   </section>

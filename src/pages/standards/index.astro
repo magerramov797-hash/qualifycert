@@ -1,54 +1,54 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const title = "Стандарты";
+const title = "Standartlar";
 const desc =
-  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: кому подходят, что дают и как мы помогаем подготовиться.";
+  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 və HACCP: uyğunluq, faydalar və hazırlıq prosesi.";
 
 const standards = [
   {
     title: "ISO 9001",
     tag: "Quality",
-    desc: "Система менеджмента качества: процессы, KPI, риски, несоответствия и улучшения.",
+    desc: "Keyfiyyət idarəetməsi: proseslər, KPI, risklər, uyğunsuzluqlar və yaxşılaşdırmalar.",
     href: "/standards/iso-9001/",
   },
   {
     title: "ISO 14001",
     tag: "Environment",
-    desc: "Экология: аспекты и воздействия, соблюдение требований, цели и программы.",
+    desc: "Ekologiya: aspektlər və təsirlər, tələblərə uyğunluq, məqsəd və proqramlar.",
     href: "/standards/iso-14001/",
   },
   {
     title: "ISO 45001",
     tag: "OH&S",
-    desc: "Охрана труда: опасности, оценка рисков, обучение, расследования, контроль.",
+    desc: "Əməyin mühafizəsi: təhlükələr, risklərin qiymətləndirilməsi, təlim, araşdırma, nəzarət.",
     href: "/standards/iso-45001/",
   },
   {
     title: "ISO 22000",
     tag: "Food Safety",
-    desc: "Пищевая безопасность: PRP, анализ опасностей, OPRP/CCP, управление рисками.",
+    desc: "Qida təhlükəsizliyi: PRP, təhlükə analizi, OPRP/CCP, risklərin idarə edilməsi.",
     href: "/standards/iso-22000/",
   },
   {
     title: "HACCP",
     tag: "Food Safety",
-    desc: "План HACCP: CCP, мониторинг, корректирующие действия, записи и верификация.",
+    desc: "HACCP planı: CCP, monitorinq, düzəldici tədbirlər, qeydlər və verifikasiya.",
     href: "/standards/haccp/",
   },
   {
-    title: "Интегрированная система",
+    title: "Inteqrə olunmuş sistem",
     tag: "IMS",
-    desc: "ISO 9001 + 14001 + 45001 в одном пакете документов и процессах.",
+    desc: "ISO 9001 + 14001 + 45001 — vahid sənəd paketi və proseslər.",
     href: "/services/certification/",
   },
 ];
 
 const why = [
-  { title: "Доверие рынка", desc: "Выше шанс пройти тендеры и требования клиентов." },
-  { title: "Порядок в процессах", desc: "Понятные роли, процедуры и контроль." },
-  { title: "Меньше рисков", desc: "Снижение инцидентов, брака и потерь." },
-  { title: "Готовность к аудитам", desc: "Записи, доказательства и внутренняя проверка." },
+  { title: "Bazar etibarı", desc: "Tenderlərdən keçmək və müştəri tələblərinə uyğunluq artır." },
+  { title: "Proses nizamı", desc: "Aydın rollar, prosedurlar və nəzarət." },
+  { title: "Az risk", desc: "İnsidentlərin, itkilərin və qüsurların azalması." },
+  { title: "Auditə hazırıq", desc: "Qeydlər, sübutlar və daxili yoxlama." },
 ];
 ---
 
@@ -58,13 +58,13 @@ const why = [
       <div class="kicker">ISO • Compliance</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:940px;">
-        Поможем выбрать стандарт(ы) под вашу отрасль и цель, подготовим документацию,
-        обучим персонал и проведём внутренний аудит — чтобы вы уверенно прошли сертификацию.
+        Sahənizə və məqsədinizə uyğun standartları seçməyə kömək edirik, sənədləşməni hazırlayırıq,
+        personalı öyrədir və daxili audit keçiririk — sertifikasiyadan inamla keçəsiniz.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/contact/">Подобрать стандарт</a>
-        <a class="btn" href="/services/">Посмотреть услуги</a>
+        <a class="btn primary" href="/contact/">Standart seçin</a>
+        <a class="btn" href="/services/">Xidmətlərə baxın</a>
       </div>
 
       <div class="grid" style="margin-top:22px;">
@@ -75,7 +75,7 @@ const why = [
               <span class="kicker" style="white-space:nowrap;">{s.tag}</span>
             </div>
             <p class="p" style="margin-top:10px;">{s.desc}</p>
-            <div style="margin-top:14px; font-weight:700;">Подробнее →</div>
+            <div style="margin-top:14px; font-weight:700;">Ətraflı →</div>
           </a>
         ))}
       </div>
@@ -85,7 +85,7 @@ const why = [
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
-        <div style="font-weight:900;">Зачем компании ISO</div>
+        <div style="font-weight:900;">Niyə ISO lazımdır</div>
         <div class="grid" style="margin-top:12px;">
           {why.map((x) => (
             <div class="card" style="grid-column: span 3;">
@@ -96,9 +96,9 @@ const why = [
         </div>
 
         <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/services/certification/">Подготовка к сертификации</a>
-          <a class="btn" href="/services/audit/">Нужен аудит готовности</a>
-          <a class="btn" href="/training/">Обучение</a>
+          <a class="btn primary" href="/services/certification/">Sertifikatlaşmaya hazırlıq</a>
+          <a class="btn" href="/services/audit/">Hazırlıq auditi lazımdır</a>
+          <a class="btn" href="/training/">Təlim</a>
         </div>
       </div>
     </div>

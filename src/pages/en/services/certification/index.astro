@@ -1,0 +1,124 @@
+?---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+const title = "Сертификация ISO";
+const desc = "Подготовка к ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: диагностика, внедрение, обучение, внутренний аудит, готовность к сертификации.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Услуги</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="max-width:920px;">
+        Мы готовим компанию к сертификации так, чтобы система менеджмента работала в реальности.
+        Вы получаете понятный план, документацию, обучение, внутренний аудит и готовность к внешней оценке.
+      </p>
+
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <a class="btn primary" href="/en/contact/">Запросить стоимость</a>
+        <a class="btn" href="/en/standards/">Выбрать стандарт</a>
+      </div>
+
+      <div class="grid" style="margin-top:22px;">
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">ISO 9001</div>
+          <div class="p">Качество: процессы, KPI, управление несоответствиями, улучшения.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">ISO 14001</div>
+          <div class="p">Экология: аспекты/воздействия, требования, цели и программы.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">ISO 45001</div>
+          <div class="p">Охрана труда: опасности, риски, обучение, расследования, контроль.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">ISO 22000</div>
+          <div class="p">Пищевая безопасность: PRP, анализ опасностей, OPRP/CCP.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">HACCP</div>
+          <div class="p">План HACCP: CCP, мониторинг, корректирующие действия, записи.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:800;">Интегрированная система</div>
+          <div class="p">ISO 9001 + 14001 + 45001 в едином пакете документов и процессов.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card">
+        <div style="font-weight:800; margin-bottom:10px;">Как проходит работа</div>
+
+        <div class="grid">
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">1) Диагностика</div>
+            <div class="p">Gap-анализ, контекст, процессы, риски, требования.</div>
+          </div>
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">2) План</div>
+            <div class="p">Сроки, ответственность, перечень документов и действий.</div>
+          </div>
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">3) Внедрение</div>
+            <div class="p">Политики, процедуры, записи, обучение персонала.</div>
+          </div>
+          <div style="grid-column: span 3;">
+            <div style="font-weight:700;">4) Проверка</div>
+            <div class="p">Внутренний аудит, CAPA, готовность к сертификации.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="/en/contact/">Получить план и стоимость</a>
+          <a class="btn" href="/en/services/audit/">Нужен аудит готовности</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="grid">
+        <div class="card" style="grid-column: span 6;">
+          <div style="font-weight:800;">Что входит</div>
+          <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+            <li>План проекта и календарь работ</li>
+            <li>Пакет документов под вашу компанию</li>
+            <li>Обучение персонала и ответственных</li>
+            <li>Проведение внутреннего аудита</li>
+            <li>План корректирующих действий (CAPA)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="grid-column: span 6;">
+          <div style="font-weight:800;">Какие данные нужны</div>
+          <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+            <li>Отрасль и виды деятельности</li>
+            <li>Число сотрудников и площадок</li>
+            <li>Текущие процессы/документы (если есть)</li>
+            <li>Желаемые сроки и стандарты</li>
+            <li>Контактное лицо</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <div style="font-weight:800;">Готовы начать?</div>
+        <p class="p" style="margin-top:10px; max-width:900px;">
+          Оставьте заявку — мы уточним детали и отправим план работ и стоимость.
+        </p>
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="/en/contact/">Оставить заявку</a>
+          <a class="btn" href="/en/services/">Все услуги</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
+

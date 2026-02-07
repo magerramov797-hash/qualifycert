@@ -34,7 +34,7 @@ body {
 }
 
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+  font-family: "Inter", "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   background:
     radial-gradient(1000px 500px at 20% 0%, rgba(37,99,235,.08), transparent 55%),
     radial-gradient(1000px 600px at 80% 0%, rgba(34,197,94,.08), transparent 55%),
@@ -83,7 +83,7 @@ img {
   padding: 64px 0;
 }
 
-/attachable helper for sticky headers (optional) */
+/* attachable helper for sticky headers (optional) */
 main {
   display: block;
 }
@@ -289,6 +289,7 @@ li { line-height: 1.5; }
   /* Header menu switch */
   .nav-desktop { display: none !important; }
   .nav-mobile { display: block !important; }
+  .mobile-panel .btn { width: 100%; }
 }
 
 /* mobile */

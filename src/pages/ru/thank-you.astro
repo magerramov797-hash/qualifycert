@@ -1,0 +1,35 @@
+?---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Спасибо! Заявка получена";
+const desc = "Мы получили ваше сообщение и скоро свяжемся с вами.";
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container" style="text-align:center; max-width:860px;">
+      <div class="kicker" style="justify-content:center;">Готово</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="margin-top:10px;">
+        Мы свяжемся с вами в ближайшее время. Если вопрос срочный — напишите нам на email или позвоните.
+      </p>
+
+      <div class="card" style="margin-top:18px; text-align:left;">
+        <div style="font-weight:900;">Что дальше</div>
+        <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+          <li>Уточним отрасль, стандарты и сроки</li>
+          <li>Предложим оптимальный формат (внедрение / аудит / обучение)</li>
+          <li>Отправим план работ и стоимость</li>
+        </ul>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:18px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn primary" href="/ru/services/">Посмотреть услуги</a>
+        <a class="btn" href="/ru/insights/">Читать материалы</a>
+        <a class="btn" href="/ru/">На главную</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
+

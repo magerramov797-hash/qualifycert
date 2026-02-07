@@ -1,23 +1,23 @@
----
+﻿---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-const title = "Статьи";
-const desc = "Полезные материалы по ISO: разбор стандартов, подготовка к аудитам, чек-листы и практические советы.";
+const title = "Məqalələr";
+const desc = "ISO üzrə faydalı materiallar: standartların izahı, auditə hazırlıq, чек-листlər və praktik tövsiyələr.";
 
 const posts = [
   {
-    title: "ISO 9001: с чего начать внедрение",
+    title: "ISO 9001: tətbiqə haradan başlamaq",
     tag: "ISO 9001",
-    excerpt: "Пошаговая логика: диагностика, процессы, KPI, риски, документация и внутренний аудит.",
+    excerpt: "Addım-addım yanaşma: diaqnostika, proseslər, KPI, risklər, sənədləşmə və daxili audit.",
   },
   {
-    title: "ISO 45001: типовые ошибки по охране труда",
+    title: "ISO 45001: əməyin mühafizəsində tipik səhvlər",
     tag: "ISO 45001",
-    excerpt: "Что чаще всего проваливают компании: риски, обучение, расследования, записи и контроль подрядчиков.",
+    excerpt: "Ən çox rast gəlinən boşluqlar: risklər, təlim, araşdırmalar, qeydlər və podratçıların nəzarəti.",
   },
   {
-    title: "ISO 22000 vs HACCP: в чём разница",
+    title: "ISO 22000 vs HACCP: fərq nədədir",
     tag: "Food Safety",
-    excerpt: "Как связаны PRP/OPRP/CCP и почему ISO 22000 шире, чем просто план HACCP.",
+    excerpt: "PRP/OPRP/CCP necə bağlıdır və ISO 22000 niyə HACCP planından daha genişdir.",
   },
 ];
 ---
@@ -25,11 +25,11 @@ const posts = [
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker"><a href="/insights/">Экспертиза</a> • Блог</div>
+      <div class="kicker"><a href="/insights/">Ekspertiza</a> • Bloq</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:900px;">
-        Здесь будут статьи, которые помогают разобраться в ISO и подготовиться к аудитам. 
-        Следующим шагом мы подключим статьи из Markdown, чтобы ты мог легко добавлять новые.
+        Burada ISO üzrə materiallar olacaq: tələbləri anlamaq və auditə hazırlaşmaq üçün.
+        Növbəti mərhələdə məqalələri Markdown-dan yükləyəcəyik ki, asanlıqla yeniləyəsiniz.
       </p>
 
       <div class="grid" style="margin-top:22px;">
@@ -42,14 +42,14 @@ const posts = [
             <p class="p" style="margin-top:10px;">{p.excerpt}</p>
 
             <div style="margin-top:14px;">
-              <a class="btn" href="/contact/">Задать вопрос</a>
+              <a class="btn" href="/contact/">Sual verin</a>
             </div>
           </div>
         ))}
       </div>
 
       <div style="margin-top:18px;">
-        <a class="btn" href="/insights/">← Назад к разделу</a>
+        <a class="btn" href="/insights/">← Bölməyə qayıt</a>
       </div>
     </div>
   </section>

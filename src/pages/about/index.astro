@@ -1,77 +1,77 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const title = "О компании";
+const title = "Şirkət haqqında";
 const desc =
-  "Консалтинг по ISO: сертификация, аудит и обучение. Практичный подход, понятные процессы, измеримый результат.";
+  "ISO üzrə konsultasiya: sertifikatlaşdırma, audit və təlim. Praktik yanaşma, aydın proseslər, ölçülən nəticə.";
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">Экспертиза • Практика • Результат</div>
+      <div class="kicker">Ekspertiza • Praktika • Nəticə</div>
 
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
 
       <p class="p" style="max-width:900px;">
-        Мы помогаем компаниям внедрять и поддерживать системы менеджмента по международным стандартам ISO так,
-        чтобы они реально работали в бизнесе, а не существовали только «для сертификата».
+        Şirkətlərə ISO standartları üzrə idarəetmə sistemlərini tətbiq etməyə və dəstəkləməyə kömək edirik ki,
+        onlar real biznesdə işləsin, sadəcə sertifikat üçün “kağız” olmasın.
       </p>
 
       <div class="grid" style="margin-top:22px;">
         <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:800;">Чем занимаемся</div>
+          <div style="font-weight:800;">Nə ilə məşğuluq</div>
           <p class="p">
-            Сертификация ISO, внутренние и предсертификационные аудиты,
-            обучение персонала и внедрение систем менеджмента.
+            ISO sertifikatlaşdırma, daxili və sertifikatöncəsi auditlər,
+            personalın təlimi və idarəetmə sistemlərinin tətbiqi.
           </p>
         </div>
 
         <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:800;">Наш подход</div>
+          <div style="font-weight:800;">Yanaşmamız</div>
           <p class="p">
-            Начинаем с диагностики, затем строим систему под процессы компании,
-            обучаем сотрудников и проверяем результативность через аудит.
+            Diaqnostikadan başlayırıq, sonra sistemi şirkətin proseslərinə uyğun qururuq,
+            əməkdaşları öyrədir və nəticəni auditlə yoxlayırıq.
           </p>
         </div>
 
         <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:800;">Что получает клиент</div>
+          <div style="font-weight:800;">Müştəri nə qazanır</div>
           <p class="p">
-            Понятные процессы, управляемые риски, готовность к аудитам,
-            доверие клиентов и партнёров.
+            Aydın proseslər, idarə olunan risklər, auditlərə hazırıq,
+            müştəri və tərəfdaş etibarı.
           </p>
         </div>
       </div>
 
       <div class="card" style="margin-top:20px;">
-        <div style="font-weight:800; margin-bottom:10px;">Как мы работаем</div>
+        <div style="font-weight:800; margin-bottom:10px;">Necə işləyirik</div>
 
         <div class="grid">
           <div style="grid-column: span 3;">
-            <div style="font-weight:700;">1) Диагностика</div>
-            <div class="p">Анализ процессов, рисков, требований стандартов.</div>
+            <div style="font-weight:700;">1) Diaqnostika</div>
+            <div class="p">Proseslərin, risklərin və standart tələblərinin analizi.</div>
           </div>
 
           <div style="grid-column: span 3;">
-            <div style="font-weight:700;">2) План</div>
-            <div class="p">Этапы, сроки, ответственность и перечень документов.</div>
+            <div style="font-weight:700;">2) Plan</div>
+            <div class="p">Mərhələlər, müddətlər, məsuliyyət və sənədlər siyahısı.</div>
           </div>
 
           <div style="grid-column: span 3;">
-            <div style="font-weight:700;">3) Внедрение</div>
-            <div class="p">Документация, процессы, обучение персонала.</div>
+            <div style="font-weight:700;">3) Tətbiq</div>
+            <div class="p">Sənədləşmə, proseslər, personalın təlimi.</div>
           </div>
 
           <div style="grid-column: span 3;">
-            <div style="font-weight:700;">4) Проверка</div>
-            <div class="p">Внутренний аудит, корректирующие действия, готовность.</div>
+            <div style="font-weight:700;">4) Yoxlama</div>
+            <div class="p">Daxili audit, düzəldici tədbirlər, hazırıq.</div>
           </div>
         </div>
       </div>
 
       <div class="card" style="margin-top:20px;">
-        <div style="font-weight:800;">Почему нам доверяют</div>
+        <div style="font-weight:800;">Niyə bizə güvənirlər</div>
         <ul
           style="
             margin:10px 0 0;
@@ -81,16 +81,16 @@ const desc =
             gap:6px;
           "
         >
-          <li>Практический опыт внедрения ISO в разных отраслях</li>
-          <li>Фокус на реальную работу системы, а не формальность</li>
-          <li>Понятный язык без лишней бюрократии</li>
-          <li>Сопровождение до полной готовности к аудиту</li>
+          <li>Fərqli sahələrdə ISO tətbiqi üzrə praktik təcrübə</li>
+          <li>Formal deyil, real işləyən sistemlərə fokus</li>
+          <li>Sadə və aydın dil, əlavə bürokratiyasız</li>
+          <li>Auditə tam hazır vəziyyətədək müşayiət</li>
         </ul>
       </div>
 
       <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="/contact/">Получить консультацию</a>
-        <a class="btn" href="/services/">Наши услуги</a>
+        <a class="btn primary" href="/contact/">Məsləhət alın</a>
+        <a class="btn" href="/services/">Xidmətlərimiz</a>
       </div>
     </div>
   </section>

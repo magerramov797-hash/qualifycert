@@ -1,40 +1,40 @@
----
+﻿---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const title = "Кейсы";
+const title = "Keyslər";
 const desc =
-  "Примеры проектов: внедрение ISO, аудит готовности, обучение персонала и подготовка к сертификации.";
+  "Layihə nümunələri: ISO tətbiqi, hazırıq auditi, personal təlimi və sertifikatlaşmaya hazırlıq.";
 
 const caseItems = [
   {
-    title: "ISO 9001: внедрение системы качества",
-    industry: "Производство",
-    result: "Процессы описаны, KPI согласованы, внутренний аудит проведён.",
+    title: "ISO 9001: keyfiyyət sisteminin tətbiqi",
+    industry: "İstehsalat",
+    result: "Proseslər təsvir edildi, KPI-lar razılaşdırıldı, daxili audit keçirildi.",
   },
   {
-    title: "ISO 45001: охрана труда и безопасность",
-    industry: "Строительство",
-    result: "Матрица рисков, инструктажи, расследования, CAPA и контроль подрядчиков.",
+    title: "ISO 45001: əməyin mühafizəsi və təhlükəsizlik",
+    industry: "Tikinti",
+    result: "Risk matrisi, təlimlər, araşdırmalar, CAPA və podratçı nəzarəti quruldu.",
   },
   {
-    title: "ISO 22000 / HACCP: пищевая безопасность",
-    industry: "Пищевая отрасль",
-    result: "PRP, HACCP-план, записи мониторинга, готовность к клиентскому аудиту.",
+    title: "ISO 22000 / HACCP: qida təhlükəsizliyi",
+    industry: "Qida sənayesi",
+    result: "PRP, HACCP planı, monitorinq qeydləri, müştəri auditinə hazırıq.",
   },
   {
-    title: "Внутренний аудит (gap-анализ) перед сертификацией",
-    industry: "Логистика / склад",
-    result: "Выявлены несоответствия, составлен план корректирующих действий, повторная проверка.",
+    title: "Sertifikasiya öncəsi daxili audit (gap-analiz)",
+    industry: "Logistika / anbar",
+    result: "Uyğunsuzluqlar müəyyənləşdirildi, düzəldici tədbirlər planı hazırlandı, təkrar yoxlama aparıldı.",
   },
   {
-    title: "Обучение внутренних аудиторов",
-    industry: "Услуги",
-    result: "Команда аудиторов обучена, чек-листы готовы, проведён пилотный аудит.",
+    title: "Daxili auditorların təlimi",
+    industry: "Xidmətlər",
+    result: "Auditor komandası hazırlandı, çek-listlər formalaşdırıldı, pilot audit keçirildi.",
   },
   {
-    title: "Интегрированная система (ISO 9001 + 14001 + 45001)",
-    industry: "Производство",
-    result: "Единый пакет документов, общие процедуры, единый план аудитов и KPI.",
+    title: "Inteqrə olunmuş sistem (ISO 9001 + 14001 + 45001)",
+    industry: "İstehsalat",
+    result: "Vahid sənədlər paketi, ortaq prosedurlar, vahid audit planı və KPI-lar.",
   },
 ];
 ---
@@ -42,10 +42,10 @@ const caseItems = [
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">Практика и результат</div>
+      <div class="kicker">Praktika və nəticə</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:900px;">
-        Ниже — примеры формата работ и типовых результатов. Позже заменим карточки на реальные проекты и добавим цифры.
+        Aşağıda iş formatı və tipik nəticələrin nümunələri var. Sonradan real layihələr və rəqəmlərlə yenilənəcək.
       </p>
 
       <div class="grid" style="margin-top:22px;">
@@ -59,20 +59,20 @@ const caseItems = [
             <p class="p" style="margin-top:10px;">{c.result}</p>
 
             <div style="margin-top:14px;">
-              <a class="btn" href="/contact/">Запросить похожий проект</a>
+              <a class="btn" href="/contact/">Oxşar layihə istəyin</a>
             </div>
           </div>
         ))}
       </div>
 
       <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Хотите кейс под вашу задачу?</div>
+        <div style="font-weight:800;">Tapşırığınız üçün keys istəyirsiniz?</div>
         <p class="p" style="max-width:900px; margin-top:10px;">
-          Напишите отрасль, стандарты и сроки — подготовим план работ и стоимость.
+          Sahə, standartlar və müddətləri yazın — iş planı və qiyməti hazırlayaq.
         </p>
         <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/contact/">Получить план и стоимость</a>
-          <a class="btn" href="/services/">Посмотреть услуги</a>
+          <a class="btn primary" href="/contact/">Plan və qiymət alın</a>
+          <a class="btn" href="/services/">Xidmətlərə baxın</a>
         </div>
       </div>
     </div>

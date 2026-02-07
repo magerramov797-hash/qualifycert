@@ -1,0 +1,179 @@
+?---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const title = "Обучение";
+const desc =
+  "Обучение по ISO для руководителей, ответственных и внутренних аудиторов: программы, модули, формат, результат.";
+
+const programs = [
+  {
+    title: "ISO Awareness (для персонала)",
+    tag: "1–2 часа",
+    forWho: "Сотрудники / офис / производство",
+    points: [
+      "Что такое ISO и зачем это компании",
+      "Роль сотрудника в системе (процессы, записи, дисциплина)",
+      "Типичные ошибки, которые ломают аудит",
+      "Мини-чек-лист поведения при аудите",
+    ],
+  },
+  {
+    title: "ISO Implementation (для ответственных за систему)",
+    tag: "1–2 дня",
+    forWho: "Ответственные за ISO / менеджеры качества / HSE",
+    points: [
+      "Контекст, заинтересованные стороны, риски и цели",
+      "Процессы и KPI, документация и записи",
+      "Управление несоответствиями, CAPA и улучшения",
+      "Подготовка к сертификации: план, контроль, доказательства",
+    ],
+  },
+  {
+    title: "Internal Auditor (внутренний аудитор)",
+    tag: "2 дня",
+    forWho: "Внутренние аудиторы / руководители подразделений",
+    points: [
+      "Принципы аудита, планирование и чек-листы",
+      "Интервью и сбор доказательств",
+      "Классификация несоответствий и отчёт",
+      "CAPA и проверка эффективности",
+    ],
+  },
+];
+
+const formats = [
+  { title: "Очное", desc: "У вас на площадке, адаптируем под процессы и риски." },
+  { title: "Онлайн", desc: "Zoom/Teams, удобно для распределённых команд." },
+  { title: "Смешанное", desc: "Теория онлайн + практика/аудит на месте." },
+  { title: "Индивидуально", desc: "Под руководителя/ответственного, быстро и точечно." },
+];
+
+const whatYouGet = [
+  "Программа обучения под отрасль и стандарт",
+  "Материалы: презентации, шаблоны, примеры документов",
+  "Чек-листы (аудит/самопроверка/подготовка к сертификации)",
+  "Практические кейсы и разбор ошибок",
+  "Рекомендации по внедрению и следующему шагу",
+];
+---
+
+<BaseLayout title={title} description={desc}>
+  <!-- HERO -->
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Training • ISO</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="max-width:940px;">
+        Проводим практическое обучение по ISO для персонала, ответственных за систему и внутренних аудиторов.
+        Делаем понятно, без лишней бюрократии: примеры, чек-листы, кейсы и разбор реальных ситуаций.
+      </p>
+
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <a class="btn primary" href="/ru/contact/">Запросить программу и стоимость</a>
+        <a class="btn" href="/ru/services/certification/">Нужно внедрение ISO</a>
+      </div>
+
+      <div class="grid" style="margin-top:22px;">
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:900;">Понятный результат</div>
+          <div class="p">После обучения люди понимают требования и свою роль. Меньше ошибок на аудитах.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:900;">Практика</div>
+          <div class="p">Чек-листы, сценарии интервью, примеры несоответствий и CAPA.</div>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:900;">Под отрасль</div>
+          <div class="p">Адаптируем материалы под ваш процесс: производство, стройка, пищевка, услуги.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card">
+        <div style="font-weight:900; font-size:18px;">Программы обучения</div>
+        <p class="p" style="margin-top:10px; max-width:940px;">
+          Выберите формат по роли. Если нужно — соберём комбинированную программу под ваш стандарт (9001/14001/45001/22000/HACCP).
+        </p>
+
+        <div class="grid" style="margin-top:16px;">
+          {programs.map((p) => (
+            <div class="card" style="grid-column: span 4;">
+              <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
+                <div style="font-weight:900; line-height:1.2;">{p.title}</div>
+                <span class="kicker" style="white-space:nowrap;">{p.tag}</span>
+              </div>
+              <div class="p" style="margin-top:8px;">Кому: {p.forWho}</div>
+              <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+                {p.points.map((x) => <li>{x}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="/ru/contact/">Получить программу (PDF) и цену</a>
+          <a class="btn" href="/ru/faq/">Посмотреть FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="grid">
+        <div class="card" style="grid-column: span 6;">
+          <div style="font-weight:900;">Форматы</div>
+          <div class="grid" style="margin-top:12px;">
+            {formats.map((f) => (
+              <div class="card" style="grid-column: span 6;">
+                <div style="font-weight:800;">{f.title}</div>
+                <div class="p" style="margin-top:8px;">{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="card" style="grid-column: span 6;">
+          <div style="font-weight:900;">Что вы получите</div>
+          <ul style="margin:12px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+            {whatYouGet.map((x) => <li>{x}</li>)}
+          </ul>
+
+          <div style="margin-top:14px; border-top:1px solid var(--line); padding-top:12px;">
+            <div style="font-weight:800;">Быстрый расчёт</div>
+            <div class="p" style="margin-top:8px;">
+              Чтобы посчитать стоимость, нужны: тема/стандарт, число участников, формат (очно/онлайн) и желаемые даты.
+            </div>
+            <div style="margin-top:12px;">
+              <a class="btn primary" href="/ru/contact/">Запросить стоимость</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card">
+        <div style="font-weight:900;">Хотите обучение + аудит готовности?</div>
+        <p class="p" style="margin-top:10px; max-width:940px;">
+          Часто лучший вариант — короткое обучение + внутренний аудит по итогам. Так команда сразу закрепляет знания в практике.
+        </p>
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="/ru/contact/">Собрать программу под нас</a>
+          <a class="btn" href="/ru/services/audit/">Посмотреть аудит</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
+

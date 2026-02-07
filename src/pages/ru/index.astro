@@ -1,0 +1,123 @@
+?---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="ISO-сертификация, аудит и обучение"
+  description="Подготовка к ISO 9001, 14001, 45001, 22000, HACCP. Внедрение, внутренние аудиты, обучение персонала."
+>
+ <section
+  class="section reveal reveal-up"
+  style="
+  min-height: 86vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(248,250,252,.88), rgba(248,250,252,.88)),
+    url('/hero.png') center/cover no-repeat;
+"
+
+ >
+    <div class="container">
+      <div class="kicker">ISO • Audit • Training</div>
+      <h1 class="h1" style="margin-top:14px;">Сертификация, аудит и обучение</h1>
+
+      <p class="p" style="max-width:720px;">
+        Подготовим компанию к сертификации и выстроим систему так, чтобы она реально работала: диагностика, документы,
+        обучение, внутренний аудит, сопровождение.
+      </p>
+
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <a class="btn primary" href="/ru/contact/">Получить коммерческое</a>
+        <a class="btn" href="/ru/services/">Смотреть услуги</a>
+      </div>
+
+      <div class="grid" style="margin-top:26px;">
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 9001 / 14001 / 45001</div>
+          <div class="p">IMS под ваш бизнес: процессы, KPI, риски, документация.</div>
+        </div>
+
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">ISO 22000 / HACCP</div>
+          <div class="p">Пищевая безопасность: программы-предпосылки, HACCP-план.</div>
+        </div>
+
+        <div class="card" style="grid-column: span 4;">
+          <div style="font-weight:700;">Аудит и обучение</div>
+          <div class="p">Внутренние аудиты, подготовка, обучение аудиторов и персонала.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- STEP A: VALUE (why us) -->
+  <section class="section reveal reveal-up" style="padding-top:0;">
+    <div class="container">
+      <div class="kicker">Ценность</div>
+      <h2 class="h2" style="margin-top:10px;">Чем мы полезны бизнесу</h2>
+      <p class="p" style="max-width:920px;">
+        Мы строим систему менеджмента так, чтобы она работала в реальности: помогала управлять процессами,
+        снижать риски и уверенно проходить аудиты — без формальности «для галочки».
+      </p>
+
+      <div class="grid" style="margin-top:18px;">
+        <div class="card reveal" style="grid-column: span 3;">
+          <div style="font-weight:900;">Готовность к аудитам</div>
+          <div class="p">Записи, доказательства, интервью — всё подготовлено и понятно.</div>
+        </div>
+        <div class="card reveal delay-1" style="grid-column: span 3;">
+          <div style="font-weight:900;">Порядок в процессах</div>
+          <div class="p">Роли, ответственность, KPI и контроль — без лишней бюрократии.</div>
+        </div>
+        <div class="card reveal delay-2" style="grid-column: span 3;">
+          <div style="font-weight:900;">Меньше рисков и потерь</div>
+          <div class="p">Управление рисками, несоответствиями и улучшениями.</div>
+        </div>
+        <div class="card reveal delay-3" style="grid-column: span 3;">
+          <div style="font-weight:900;">Понятная дорожная карта</div>
+          <div class="p">Диагностика → план → внедрение → внутренний аудит → готовность.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP A: SERVICES PREVIEW -->
+  <section class="section reveal reveal-up" style="padding-top:0;">
+    <div class="container">
+      <div class="kicker">Услуги</div>
+      <h2 class="h2" style="margin-top:10px;">Что мы делаем</h2>
+      <p class="p" style="max-width:920px;">
+        Выберите направление — мы подскажем оптимальный формат под ваш стандарт, отрасль и сроки.
+      </p>
+
+      <div class="grid" style="margin-top:18px;">
+        <a class="card reveal" href="/ru/services/certification/" style="grid-column: span 4;">
+          <div style="font-weight:900;">Сертификация ISO</div>
+          <div class="p">Подготовка к ISO 9001/14001/45001/22000 и HACCP: внедрение, обучение, готовность.</div>
+          <div style="margin-top:14px; font-weight:800;">Подробнее →</div>
+        </a>
+
+        <a class="card reveal delay-1" href="/ru/services/audit/" style="grid-column: span 4;">
+          <div style="font-weight:900;">Аудит</div>
+          <div class="p">Gap-анализ, внутренний аудит, предсертификационная проверка, отчёт и CAPA-план.</div>
+          <div style="margin-top:14px; font-weight:800;">Подробнее →</div>
+        </a>
+
+        <a class="card reveal delay-2" href="/ru/training/" style="grid-column: span 4;">
+          <div style="font-weight:900;">Обучение</div>
+          <div class="p">Для персонала, ответственных и внутренних аудиторов: практика, чек-листы и кейсы.</div>
+          <div style="margin-top:14px; font-weight:800;">Подробнее →</div>
+        </a>
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="/ru/contact/">Получить консультацию</a>
+        <a class="btn" href="/ru/services/">Все услуги</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
+
+

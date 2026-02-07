@@ -1,0 +1,59 @@
+?---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+const title = "Статьи";
+const desc = "Полезные материалы по ISO: разбор стандартов, подготовка к аудитам, чек-листы и практические советы.";
+
+const posts = [
+  {
+    title: "ISO 9001: с чего начать внедрение",
+    tag: "ISO 9001",
+    excerpt: "Пошаговая логика: диагностика, процессы, KPI, риски, документация и внутренний аудит.",
+  },
+  {
+    title: "ISO 45001: типовые ошибки по охране труда",
+    tag: "ISO 45001",
+    excerpt: "Что чаще всего проваливают компании: риски, обучение, расследования, записи и контроль подрядчиков.",
+  },
+  {
+    title: "ISO 22000 vs HACCP: в чём разница",
+    tag: "Food Safety",
+    excerpt: "Как связаны PRP/OPRP/CCP и почему ISO 22000 шире, чем просто план HACCP.",
+  },
+];
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker"><a href="/ru/insights/">Экспертиза</a> • Блог</div>
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+      <p class="p" style="max-width:900px;">
+        Здесь будут статьи, которые помогают разобраться в ISO и подготовиться к аудитам. 
+        Следующим шагом мы подключим статьи из Markdown, чтобы ты мог легко добавлять новые.
+      </p>
+
+      <div class="grid" style="margin-top:22px;">
+        {posts.map((p) => (
+          <div class="card" style="grid-column: span 4;">
+            <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
+              <div style="font-weight:900; line-height:1.2;">{p.title}</div>
+              <span class="kicker" style="white-space:nowrap;">{p.tag}</span>
+            </div>
+            <p class="p" style="margin-top:10px;">{p.excerpt}</p>
+
+            <div style="margin-top:14px;">
+              <a class="btn" href="/ru/contact/">Задать вопрос</a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div style="margin-top:18px;">
+        <a class="btn" href="/ru/insights/">← Назад к разделу</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
+

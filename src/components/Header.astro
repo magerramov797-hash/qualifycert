@@ -1,5 +1,12 @@
----
+﻿---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { translations } from "../i18n/translations";
+
 const brand = "QualifyCert";
+const { lang = "az", currentPath = "/" } = Astro.props;
+const t = translations[lang];
+const prefix = lang === "az" ? "" : `/${lang}`;
+const link = (path) => `${prefix}${path === "/" ? "/" : path}`;
 ---
 
 <header style="
@@ -10,49 +17,54 @@ const brand = "QualifyCert";
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 ">
-  <div class="container header-wrap" style="
+  <div class="container" style="
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 14px 0;
-    gap: 12px;
+    gap: 14px;
   ">
-
     <!-- Логотип -->
-    <a href="/" style="display:flex; align-items:center; gap:10px;">
+    <a href={link("/")} style="display:flex; align-items:center; gap:10px;">
       <img
         src="/images/logo.png"
-        alt="QualifyCert"
-        style="height:48px; width:auto; display:block;"
+        alt="ISO Audit & Training"
+        style="
+          height:48px;
+          width:auto;
+          display:block;
+        "
       />
       <strong>{brand}</strong>
     </a>
 
-    <!-- DESKTOP меню -->
-    <nav class="nav-desktop" style="display:flex; gap:18px; align-items:center;">
-      <a href="/services/">Услуги</a>
-      <a href="/standards/">Стандарты</a>
-      <a href="/industries/">Отрасли</a>
-      <a href="/insights/">Insights</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/about/">О компании</a>
-      <a href="/contact/" class="btn primary">Получить предложение</a>
+    <!-- Desktop menu -->
+    <nav class="nav-desktop">
+      <a href={link("/services/")}>{t.nav.services}</a>
+      <a href={link("/standards/")}>{t.nav.standards}</a>
+      <a href={link("/industries/")}>{t.nav.industries}</a>
+      <a href={link("/insights/")}>{t.nav.insights}</a>
+      <a href={link("/faq/")}>{t.nav.faq}</a>
+      <a href={link("/about/")}>{t.nav.about}</a>
+      <a href={link("/contact/")}>{t.nav.contact}</a>
+      <LanguageSwitcher currentLang={lang} currentPath={currentPath} />
+      <a href={link("/contact/")} class="btn primary">{t.nav.cta}</a>
     </nav>
 
-    <!-- MOBILE меню (без JS) -->
+    <!-- Mobile menu -->
     <details class="nav-mobile">
-      <summary class="btn">Меню</summary>
-
+      <summary class="btn">Menu</summary>
       <div class="mobile-panel">
-        <a href="/services/">Услуги</a>
-        <a href="/standards/">Стандарты</a>
-        <a href="/industries/">Отрасли</a>
-        <a href="/insights/">Insights</a>
-        <a href="/faq/">FAQ</a>
-        <a href="/about/">О компании</a>
-        <a href="/contact/" class="btn primary" style="justify-content:center;">Получить предложение</a>
+        <a href={link("/services/")}>{t.nav.services}</a>
+        <a href={link("/standards/")}>{t.nav.standards}</a>
+        <a href={link("/industries/")}>{t.nav.industries}</a>
+        <a href={link("/insights/")}>{t.nav.insights}</a>
+        <a href={link("/faq/")}>{t.nav.faq}</a>
+        <a href={link("/about/")}>{t.nav.about}</a>
+        <a href={link("/contact/")}>{t.nav.contact}</a>
+        <LanguageSwitcher currentLang={lang} currentPath={currentPath} />
+        <a href={link("/contact/")} class="btn primary">{t.nav.cta}</a>
       </div>
     </details>
-
   </div>
 </header>
