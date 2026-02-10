@@ -3,20 +3,102 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Səhifə tapılmadı" description="Axtardığınız səhifə mövcud deyil.">
-  <section class="section">
-    <div class="container" style="text-align:center;">
-      <div class="kicker">404</div>
-      <h1 class="h1" style="margin-top:12px;">Səhifə tapılmadı</h1>
-      <p class="p" style="margin:12px auto 0; max-width:640px;">
+  <section class="section nf-wrap">
+    <div class="container nf-box">
+      <div class="kicker nf-kicker">404</div>
+
+      <h1 class="h1 nf-title">Səhifə tapılmadı</h1>
+
+      <p class="p nf-desc">
         Link səhv ola bilər və ya səhifə başqa ünvana köçürülüb.
       </p>
-      <div style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-        <a class="btn primary" href="/">Əsas səhifə</a>
-        <a class="btn" href="/services/">Xidmətlər</a>
-        <a class="btn" href="/standards/">Standartlar</a>
-        <a class="btn" href="/insights/">Ekspertiza</a>
-        <a class="btn" href="/contact/">Əlaqə</a>
+
+      <!-- actions -->
+      <div class="nf-actions">
+        <a class="btn primary nf-btn" href="/">Əsas səhifə</a>
+        <a class="btn nf-btn" href="/services/">Xidmətlər</a>
+        <a class="btn nf-btn" href="/standards/">Standartlar</a>
+        <a class="btn nf-btn" href="/blog/">Bloq</a>
+        <a class="btn nf-btn" href="/contact/">Əlaqə</a>
+      </div>
+
+      <!-- quick -->
+      <div class="card nf-quick">
+        <div class="nf-quick-title">Tez axtarış</div>
+        <div class="nf-quick-links">
+          <a href="/services/certification/">ISO sertifikatlaşdırma</a>
+          <span>•</span>
+          <a href="/services/audit/">Audit</a>
+          <span>•</span>
+          <a href="/training/">Təlim</a>
+          <span>•</span>
+          <a href="/contact/">Məsləhət</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    .nf-wrap{
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .nf-box{
+      max-width: 860px;
+      text-align: center;
+    }
+
+    .nf-kicker{
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .nf-title{ margin-top: 14px; }
+    .nf-desc{
+      margin: 10px auto 0;
+      max-width: 640px;
+    }
+
+    .nf-actions{
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      justify-items: stretch;
+      align-items: stretch;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nf-actions .nf-btn{
+      width: 100% !important;
+      justify-content: center;
+    }
+
+    .nf-quick{
+      margin: 14px auto 0;
+      max-width: 760px;
+      text-align: left;
+      padding: 18px 20px;
+    }
+    .nf-quick-title{ font-weight: 800; }
+
+    .nf-quick-links{
+      margin-top: 10px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .nf-quick-links span{ opacity: .55; }
+
+    @media (max-width: 640px){
+      .nf-wrap{ min-height: auto; }
+      .nf-actions{ grid-template-columns: 1fr; }
+    }
+  </style>
 </BaseLayout>

@@ -1,7 +1,8 @@
 ﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Sahələr";
-const desc = "ISO tətbiqi və sertifikatlaşmaya hazırlıq sahələr üzrə: istehsalat, qida, tikinti, xidmətlər, logistika.";
+const desc =
+  "ISO tətbiqi və sertifikatlaşmaya hazırlıq sahələr üzrə: istehsalat, qida, tikinti, xidmətlər və logistika.";
 ---
 
 <BaseLayout title={title} description={desc}>
@@ -9,65 +10,88 @@ const desc = "ISO tətbiqi və sertifikatlaşmaya hazırlıq sahələr üzrə: i
     <div class="container">
       <div class="kicker">Sahəyə uyğunlaşırıq</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
       <p class="p" style="max-width:900px;">
-        Hər sahənin öz riskləri, tələbləri və tipik uyğunsuzluqları var. Sistemi proseslərinizə və real işə uyğunlaşdırırıq.
+        Hər sahənin öz riskləri, normativ tələbləri və tipik uyğunsuzluqları var.
+        ISO sistemini real proseslərinizə uyğunlaşdırır, praktik və işlək şəkildə qururuq.
       </p>
 
-      <div class="grid" style="margin-top:22px;">
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+      <!-- Industries -->
+      <div class="grid grid-auto" style="margin-top:22px;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">İstehsalat</div>
-          <div class="p">Proseslər, keyfiyyət nəzarəti, dəyişikliklərin idarəsi, uyğunsuzluqlar, CAPA.</div>
+          <div class="p">
+            Proseslərin idarə olunması, keyfiyyət nəzarəti, dəyişikliklərin idarəsi,
+            uyğunsuzluqlar və CAPA.
+          </div>
         </a>
 
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">Qida sənayesi</div>
-          <div class="p">ISO 22000/HACCP, PRP, gigiyena, izlənəbilənlik, hazırıq auditi.</div>
+          <div class="p">
+            ISO 22000 / HACCP, PRP-lər, gigiyena, izlənəbilənlik və hazırıq auditi.
+          </div>
         </a>
 
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">Tikinti</div>
-          <div class="p">ISO 9001/14001/45001, əməyin mühafizəsi, podratçı nəzarəti, sənədləşmə.</div>
+          <div class="p">
+            ISO 9001 / 14001 / 45001, əməyin mühafizəsi,
+            podratçı nəzarəti və sənədləşmə.
+          </div>
         </a>
 
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">Logistika və anbar</div>
-          <div class="p">İşlərin təhlükəsizliyi, təlim, proses nəzarəti, iddialar, yaxşılaşdırmalar.</div>
+          <div class="p">
+            Təhlükəsizlik, proses nəzarəti, təlimlər,
+            iddialar və davamlı yaxşılaşdırma.
+          </div>
         </a>
 
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">Xidmətlər və ofis</div>
-          <div class="p">Proseslər, SLA, risklər, müştəri təcrübəsi, daxili auditlər.</div>
+          <div class="p">
+            Proseslər, SLA-lar, risklərin idarə olunması,
+            müştəri təcrübəsi və daxili auditlər.
+          </div>
         </a>
 
-        <a class="card" href="/contact/" style="grid-column: span 4;">
+        <a class="card" href="/contact/">
           <div style="font-weight:700;">HoReCa</div>
-          <div class="p">Qida təhlükəsizliyi, sanitariya, personal təlimi, çek-listlər.</div>
+          <div class="p">
+            Qida təhlükəsizliyi, sanitariya qaydaları,
+            personalın təlimi və gündəlik çek-listlər.
+          </div>
         </a>
       </div>
 
+      <!-- Value -->
       <div class="card" style="margin-top:18px;">
         <div style="font-weight:700;">Nə əldə edirsiniz</div>
-        <div class="grid" style="margin-top:10px;">
-          <div style="grid-column: span 4;">
+
+        <div class="grid grid-auto" style="margin-top:10px;">
+          <div>
             <div style="font-weight:700;">İş planı</div>
-            <div class="p">Müddətlər, mərhələlər, məsul şəxslər və sənədlər siyahısı.</div>
+            <div class="p">Mərhələlər, müddətlər, məsul şəxslər və sənədlər siyahısı.</div>
           </div>
-          <div style="grid-column: span 4;">
+
+          <div>
             <div style="font-weight:700;">Şablonlar və alətlər</div>
-            <div class="p">Siyasətlər, prosedurlar, çek-listlər, jurnallar və formalar.</div>
+            <div class="p">Siyasətlər, prosedurlar, formalar, jurnallar və чек-listlər.</div>
           </div>
-          <div style="grid-column: span 4;">
+
+          <div>
             <div style="font-weight:700;">Auditə hazırıq</div>
             <div class="p">Daxili audit, CAPA və sertifikatlaşmaya hazırlıq.</div>
           </div>
         </div>
 
-        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/contact/">Məsləhət alın</a>
-          <a class="btn" href="/services/">Xidmətlərimiz</a>
+        <div class="grid grid-auto" style="margin-top:14px; max-width:520px; justify-items:center;">
+          <a class="btn primary" href="/contact/" style="width:100%;">Məsləhət alın</a>
+          <a class="btn" href="/services/" style="width:100%;">Xidmətlərimiz</a>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-

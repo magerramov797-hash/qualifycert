@@ -18,8 +18,9 @@ const desc =
         onlar real biznesdə işləsin, sadəcə sertifikat üçün “kağız” olmasın.
       </p>
 
-      <div class="grid" style="margin-top:22px;">
-        <div class="card" style="grid-column: span 4;">
+      <!-- 3 cards (auto grid) -->
+      <div class="grid grid-auto" style="margin-top:22px;">
+        <div class="card">
           <div style="font-weight:800;">Nə ilə məşğuluq</div>
           <p class="p">
             ISO sertifikatlaşdırma, daxili və sertifikatöncəsi auditlər,
@@ -27,7 +28,7 @@ const desc =
           </p>
         </div>
 
-        <div class="card" style="grid-column: span 4;">
+        <div class="card">
           <div style="font-weight:800;">Yanaşmamız</div>
           <p class="p">
             Diaqnostikadan başlayırıq, sonra sistemi şirkətin proseslərinə uyğun qururuq,
@@ -35,7 +36,7 @@ const desc =
           </p>
         </div>
 
-        <div class="card" style="grid-column: span 4;">
+        <div class="card">
           <div style="font-weight:800;">Müştəri nə qazanır</div>
           <p class="p">
             Aydın proseslər, idarə olunan risklər, auditlərə hazırıq,
@@ -44,43 +45,37 @@ const desc =
         </div>
       </div>
 
+      <!-- How we work -->
       <div class="card" style="margin-top:20px;">
         <div style="font-weight:800; margin-bottom:10px;">Necə işləyirik</div>
 
-        <div class="grid">
-          <div style="grid-column: span 3;">
+        <div class="grid grid-auto about-steps">
+          <div class="step">
             <div style="font-weight:700;">1) Diaqnostika</div>
             <div class="p">Proseslərin, risklərin və standart tələblərinin analizi.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">2) Plan</div>
             <div class="p">Mərhələlər, müddətlər, məsuliyyət və sənədlər siyahısı.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">3) Tətbiq</div>
             <div class="p">Sənədləşmə, proseslər, personalın təlimi.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">4) Yoxlama</div>
             <div class="p">Daxili audit, düzəldici tədbirlər, hazırıq.</div>
           </div>
         </div>
       </div>
 
+      <!-- Why trust -->
       <div class="card" style="margin-top:20px;">
         <div style="font-weight:800;">Niyə bizə güvənirlər</div>
-        <ul
-          style="
-            margin:10px 0 0;
-            padding-left:18px;
-            color: var(--muted);
-            display:grid;
-            gap:6px;
-          "
-        >
+        <ul class="p about-list">
           <li>Fərqli sahələrdə ISO tətbiqi üzrə praktik təcrübə</li>
           <li>Formal deyil, real işləyən sistemlərə fokus</li>
           <li>Sadə və aydın dil, əlavə bürokratiyasız</li>
@@ -88,10 +83,34 @@ const desc =
         </ul>
       </div>
 
-      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="/contact/">Məsləhət alın</a>
-        <a class="btn" href="/services/">Xidmətlərimiz</a>
+      <!-- CTA -->
+      <div class="grid grid-auto" style="margin-top:18px; justify-items:center; max-width:520px;">
+        <a class="btn primary" href="/contact/" style="width:100%;">Məsləhət alın</a>
+        <a class="btn" href="/services/" style="width:100%;">Xidmətlərimiz</a>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    /* Make steps look tighter inside the card */
+    .about-steps{
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .about-steps .step{
+      padding: 12px;
+      border: 1px dashed rgba(15,23,42,.10);
+      border-radius: 14px;
+      background: rgba(255,255,255,.55);
+    }
+
+    .about-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+  </style>
 </BaseLayout>

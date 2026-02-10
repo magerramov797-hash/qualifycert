@@ -1,4 +1,4 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 const title = "Политика конфиденциальности";
 const desc = "Правила обработки и защиты персональных данных на сайте.";
@@ -6,26 +6,26 @@ const desc = "Правила обработки и защиты персонал
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
-    <div class="container">
+    <div class="container" style="max-width:920px;">
       <div class="kicker">Документы</div>
+
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:920px;">
-        Здесь будет опубликована политика конфиденциальности и условия обработки персональных данных.
-        Пока сайт в разработке, текст можно заменить на финальную версию.
+
+      <p class="p" style="margin-top:10px;">
+        На этой странице представлена общая информация о правилах сбора,
+        обработки и защиты персональных данных на сайте QualifyCert.
+        Окончательная версия политики будет опубликована после запуска сайта.
       </p>
 
       <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Кратко</div>
-        <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-          <li>Какие данные собираются (например: имя, телефон, email в форме заявки)</li>
-          <li>Зачем собираются (обработка обращений, коммерческие предложения)</li>
-          <li>Как хранятся и защищаются</li>
-          <li>Как связаться для удаления/изменения данных</li>
+        <div style="font-weight:800;">Краткое описание</div>
+        <ul class="p" style="margin-top:10px; padding-left:18px; display:grid; gap:6px;">
+          <li>Собираемые данные: имя, телефон, email и содержание обращения</li>
+          <li>Цель обработки данных: обработка запросов и обратная связь</li>
+          <li>Хранение данных и отсутствие передачи третьим лицам</li>
+          <li>Возможность изменения или удаления данных по запросу</li>
         </ul>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-
-

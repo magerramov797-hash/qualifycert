@@ -1,6 +1,8 @@
 ---
 const { currentLang = "az", currentPath = "/" } = Astro.props;
 
+// Список "известных" путей, чтобы свитчер не уводил на 404.
+// Обновили структуру: убрали /insights и добавили /blog.
 const knownPaths = new Set([
   "/",
   "/services/",
@@ -14,16 +16,14 @@ const knownPaths = new Set([
   "/standards/iso-45001/",
   "/standards/iso-22000/",
   "/standards/haccp/",
-  "/insights/",
-  "/insights/blog/",
-  "/insights/cases/",
+  "/industries/",
+  "/blog/",
   "/faq/",
   "/about/",
   "/contact/",
   "/privacy/",
   "/cookies/",
   "/thank-you/",
-  "/industries/"
 ]);
 
 const normalizedPath =

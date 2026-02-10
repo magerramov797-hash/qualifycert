@@ -6,21 +6,24 @@ const desc = "Saytda şəxsi məlumatların emalı və qorunması qaydaları.";
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
-    <div class="container">
+    <div class="container" style="max-width:920px;">
       <div class="kicker">Sənədlər</div>
+
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:920px;">
-        Burada məxfilik siyasəti və şəxsi məlumatların emalı şərtləri yerləşdiriləcək.
-        Sayt yekunlaşdıqdan sonra mətnin son versiyası əlavə ediləcək.
+
+      <p class="p" style="margin-top:10px;">
+        Bu səhifə QualifyCert saytında şəxsi məlumatların toplanması,
+        emalı və qorunması qaydaları haqqında ümumi məlumat verir.
+        Sayt tam istifadəyə verildikdən sonra mətnin yekun versiyası əlavə ediləcək.
       </p>
 
       <div class="card" style="margin-top:18px;">
         <div style="font-weight:800;">Qısa xülasə</div>
-        <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-          <li>Toplanan məlumatlar (məsələn: ad, telefon, email)</li>
-          <li>Toplanma məqsədi (müraciətlərin emalı, kommersiya təklifləri)</li>
-          <li>Məlumatların saxlanma və qorunma qaydaları</li>
-          <li>Məlumatların silinməsi/dəyişdirilməsi üçün əlaqə</li>
+        <ul class="p" style="margin-top:10px; padding-left:18px; display:grid; gap:6px;">
+          <li>Toplanan məlumatlar: ad, telefon nömrəsi, email və müraciət məzmunu</li>
+          <li>Məlumatların toplanma məqsədi: müraciətlərin emalı və cavablandırılması</li>
+          <li>Məlumatların saxlanması və üçüncü şəxslərə ötürülməməsi</li>
+          <li>Məlumatların dəyişdirilməsi və ya silinməsi üçün əlaqə imkanı</li>
         </ul>
       </div>
     </div>

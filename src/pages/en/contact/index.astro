@@ -1,32 +1,35 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-const title = "Контакты";
-const desc = "Оставьте заявку на ISO-сертификацию, аудит или обучение. Ответим и отправим план работ и стоимость.";
+const title = "Contact";
+const desc =
+  "Send an inquiry about ISO certification, audits, or training. We’ll reply with a project plan and pricing.";
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">Связаться с нами</div>
+      <div class="kicker">Get in touch</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:860px;">
-        Напишите, какие стандарты/услуги интересуют — мы уточним детали и отправим план работ, сроки и стоимость.
+        Tell us which standard/service you’re interested in — we’ll уточним details and share the work plan,
+        timeline, and pricing.
       </p>
 
-      <div class="grid" style="margin-top:22px;">
-        <!-- Левая колонка -->
-        <div class="card" style="grid-column: span 5;">
-          <div style="font-weight:700; margin-bottom:10px;">Контактные данные</div>
+      <!-- Layout: left info + right form (responsive without breaking) -->
+      <div class="grid contact-layout" style="margin-top:22px;">
+        <!-- Left -->
+        <div class="card contact-left">
+          <div style="font-weight:700; margin-bottom:10px;">Contact details</div>
 
           <div style="display:grid; gap:10px;">
             <div>
-              <div style="font-size:13px; color: var(--muted);">Телефон</div>
-              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+              <div style="font-size:13px; color: var(--muted);">Phone</div>
+              <div style="font-weight:600;">+994 70 857 28 17</div>
             </div>
 
             <div>
               <div style="font-size:13px; color: var(--muted);">WhatsApp</div>
-              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+              <div style="font-weight:600;">+994 70 857 28 17</div>
             </div>
 
             <div>
@@ -35,63 +38,60 @@ const desc = "Оставьте заявку на ISO-сертификацию, �
             </div>
 
             <div>
-              <div style="font-size:13px; color: var(--muted);">Город</div>
-              <div style="font-weight:600;">Баку, Азербайджан</div>
+              <div style="font-size:13px; color: var(--muted);">City</div>
+              <div style="font-weight:600;">Baku, Azerbaijan</div>
             </div>
           </div>
 
           <div style="margin-top:18px; border-top:1px solid var(--line); padding-top:14px;">
-            <div style="font-weight:700; margin-bottom:8px;">Что можно запросить</div>
-            <ul style="margin:0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-              <li>План подготовки к ISO и сроки</li>
-              <li>Коммерческое предложение</li>
-              <li>Аудит готовности (gap-анализ)</li>
-              <li>Программа обучения персонала</li>
+            <div style="font-weight:700; margin-bottom:8px;">What you can ask</div>
+            <ul class="p contact-list">
+              <li>ISO preparation plan and timelines</li>
+              <li>Commercial proposal</li>
+              <li>Readiness audit (gap analysis)</li>
+              <li>Staff training program</li>
             </ul>
+          </div>
+
+          <div class="grid grid-auto" style="margin-top:14px; justify-items:center;">
+            <a class="btn" href="mailto:info@qualifycert.com" style="width:100%;">Email us</a>
+            <a class="btn" href="tel:+994708572817" style="width:100%;">Call us</a>
           </div>
         </div>
 
-        <!-- Правая колонка -->
-        <div class="card" style="grid-column: span 7;">
-          <div style="font-weight:700; margin-bottom:10px;">Оставить заявку</div>
+        <!-- Right -->
+        <div class="card contact-right">
+          <div style="font-weight:700; margin-bottom:10px;">Send an inquiry</div>
 
           <form method="post">
-            <div class="grid">
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Имя</label>
-                <input name="name" required
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="Ваше имя" />
+            <!-- Form fields: auto grid (2 columns when possible) -->
+            <div class="grid grid-auto form-grid">
+              <div>
+                <label class="field-label" for="name">Name</label>
+                <input id="name" name="name" required class="field" placeholder="Your name" />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Компания</label>
-                <input name="company"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="Название компании" />
+              <div>
+                <label class="field-label" for="company">Company</label>
+                <input id="company" name="company" class="field" placeholder="Company name" />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Телефон / WhatsApp</label>
-                <input name="phone" required
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="+994..." />
+              <div>
+                <label class="field-label" for="phone">Phone / WhatsApp</label>
+                <input id="phone" name="phone" required class="field" placeholder="+994..." />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Email</label>
-                <input name="email" type="email"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="email@company.com" />
+              <div>
+                <label class="field-label" for="email">Email</label>
+                <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
               </div>
 
-              <div style="grid-column: span 12;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Интересует</label>
-                <select name="topic"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; background:#fff;">
-                  <option>Сертификация ISO</option>
-                  <option>Аудит</option>
-                  <option>Обучение</option>
+              <div class="span-2">
+                <label class="field-label" for="topic">Topic</label>
+                <select id="topic" name="topic" class="field field-select">
+                  <option>ISO certification preparation</option>
+                  <option>Audit</option>
+                  <option>Training</option>
                   <option>ISO 9001</option>
                   <option>ISO 14001</option>
                   <option>ISO 45001</option>
@@ -99,28 +99,95 @@ const desc = "Оставьте заявку на ISO-сертификацию, �
                 </select>
               </div>
 
-              <div style="grid-column: span 12;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Сообщение</label>
-                <textarea name="message" rows="5"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; resize:vertical;"
-                  placeholder="Коротко опишите задачу: отрасль, число сотрудников, сроки..."></textarea>
+              <div class="span-2">
+                <label class="field-label" for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="field"
+                  style="resize:vertical;"
+                  placeholder="Briefly: industry, number of employees, timeline..."
+                ></textarea>
               </div>
             </div>
 
-            <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap;">
-              <button class="btn primary" type="submit">Отправить заявку</button>
-              <a class="btn" href="/en/services/">Посмотреть услуги</a>
+            <!-- Actions -->
+            <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
+              <button class="btn primary" type="submit" style="width:100%;">Submit inquiry</button>
+              <a class="btn" href="/en/services/" style="width:100%;">View services</a>
             </div>
 
             <p class="p" style="font-size:13px; margin-top:12px;">
-              Нажимая “Отправить заявку”, вы соглашаетесь с обработкой персональных данных.
+              By clicking “Submit inquiry”, you agree to the processing of your personal data.
             </p>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    /* Layout (left + right) */
+    .contact-layout{
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .contact-left{ grid-column: span 5; }
+    .contact-right{ grid-column: span 7; }
+
+    @media (max-width: 900px){
+      .contact-left,
+      .contact-right{
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Lists */
+    .contact-list{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    /* Form fields */
+    .form-grid{
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    /* Full width blocks inside auto grid */
+    .span-2{
+      grid-column: 1 / -1;
+    }
+
+    .field-label{
+      font-size: 13px;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .field{
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      outline: none;
+      background: #fff;
+      color: var(--text);
+    }
+
+    .field:focus{
+      border-color: rgba(37,99,235,.35);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+    }
+
+    .field-select{
+      appearance: none;
+    }
+  </style>
 </BaseLayout>
-
-
-

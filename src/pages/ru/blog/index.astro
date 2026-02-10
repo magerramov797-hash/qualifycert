@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const title = "Статьи";
+const desc =
+  "Полезные материалы по ISO: пояснение стандартов, подготовка к аудиту, чек-листы и практические рекомендации.";
+
+const posts = [
+  {
+    title: "ISO 9001: с чего начать внедрение",
+    tag: "ISO 9001",
+    excerpt:
+      "Пошаговый подход: диагностика, построение процессов, KPI, риски, документация и внутренний аудит.",
+  },
+  {
+    title: "ISO 45001: типичные ошибки в охране труда",
+    tag: "ISO 45001",
+    excerpt:
+      "Наиболее частые пробелы: оценка рисков, обучение, расследования, записи и контроль подрядчиков.",
+  },
+  {
+    title: "ISO 22000 и HACCP: в чём разница",
+    tag: "Food Safety",
+    excerpt:
+      "Как связаны PRP, OPRP и CCP и почему ISO 22000 шире классического HACCP-плана.",
+  },
+];
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Блог</div>
+
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
+      <p class="p" style="max-width:900px;">
+        В этом разделе мы публикуем материалы по стандартам ISO —
+        чтобы помочь разобраться в требованиях, подготовиться к аудиту и увидеть практические подходы.
+        Статьи будут основаны на реальных примерах и опыте внедрения.
+      </p>
+
+      <div class="grid grid-auto" style="margin-top:22px;">
+        {posts.map((p) => (
+          <article class="card">
+            <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
+              <h2 style="font-weight:900; line-height:1.2; font-size:18px; margin:0;">
+                {p.title}
+              </h2>
+              <span class="kicker" style="white-space:nowrap;">{p.tag}</span>
+            </div>
+
+            <p class="p" style="margin-top:10px;">{p.excerpt}</p>
+
+            <div style="margin-top:14px;">
+              <a class="btn" href="/ru/contact/">Задать вопрос</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

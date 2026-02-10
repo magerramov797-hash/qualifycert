@@ -1,30 +1,65 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-const title = "Cookies";
-const desc = "Информация об использовании файлов cookie на сайте.";
+const title = "Cookies Policy";
+const desc = "Information about how cookies and analytics technologies are used on the website.";
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
-    <div class="container">
-      <div class="kicker">Документы</div>
+    <div class="container" style="max-width:920px;">
+      <div class="kicker">Documents</div>
+
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:920px;">
-        Здесь будет информация о cookie-файлах: какие используются и для чего. 
-        Пока сайт в разработке, можно оставить эту страницу как заглушку.
+
+      <p class="p" style="margin-top:10px;">
+        This page provides general information about the use of cookies and analytics technologies
+        on the QualifyCert website. This policy may be updated once the website is fully launched.
       </p>
 
-      <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Примеры целей</div>
-        <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-          <li>Корректная работа сайта и сохранение настроек</li>
-          <li>Аналитика посещений (если подключим)</li>
-          <li>Улучшение качества сервиса</li>
-        </ul>
+      <div class="grid grid-auto" style="margin-top:18px;">
+        <div class="card">
+          <div style="font-weight:800;">What are cookies?</div>
+          <p class="p" style="margin-top:8px;">
+            Cookies are small files stored in your browser. They help the website function properly,
+            improve user experience, and (when applicable) support analytics.
+          </p>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;">Why do we use them?</div>
+          <ul class="p cookies-list">
+            <li>To ensure core website functionality (technical cookies)</li>
+            <li>To improve usability (remembering preferences)</li>
+            <li>To anonymously analyze visitor behavior (analytics cookies)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;">How to manage cookies</div>
+          <p class="p" style="margin-top:8px;">
+            You can restrict, delete, or disable cookies in your browser settings.
+            Please note: disabling certain cookies may affect some website features.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <div style="font-weight:800;">Additional information</div>
+        <p class="p" style="margin-top:8px;">
+          This policy may be updated as the website functionality expands and third-party services
+          (such as analytics and measurement tools) are added. The latest version will always be published on this page.
+        </p>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    .cookies-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+  </style>
 </BaseLayout>
-
-
-

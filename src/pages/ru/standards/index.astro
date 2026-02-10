@@ -1,75 +1,76 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
 const title = "Стандарты";
 const desc =
-  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: кому подходят, что дают и как мы помогаем подготовиться.";
+  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: требования, выгоды и процесс подготовки.";
 
 const standards = [
   {
     title: "ISO 9001",
     tag: "Quality",
-    desc: "Система менеджмента качества: процессы, KPI, риски, несоответствия и улучшения.",
-    href: "/standards/iso-9001/",
+    desc: "Менеджмент качества: процессы, KPI, риски, несоответствия и улучшения.",
+    href: "/ru/standards/iso-9001/",
   },
   {
     title: "ISO 14001",
     tag: "Environment",
-    desc: "Экология: аспекты и воздействия, соблюдение требований, цели и программы.",
-    href: "/standards/iso-14001/",
+    desc: "Экология: аспекты и воздействия, соответствие требованиям, цели и программы.",
+    href: "/ru/standards/iso-14001/",
   },
   {
     title: "ISO 45001",
     tag: "OH&S",
     desc: "Охрана труда: опасности, оценка рисков, обучение, расследования, контроль.",
-    href: "/standards/iso-45001/",
+    href: "/ru/standards/iso-45001/",
   },
   {
     title: "ISO 22000",
     tag: "Food Safety",
     desc: "Пищевая безопасность: PRP, анализ опасностей, OPRP/CCP, управление рисками.",
-    href: "/standards/iso-22000/",
+    href: "/ru/standards/iso-22000/",
   },
   {
     title: "HACCP",
     tag: "Food Safety",
     desc: "План HACCP: CCP, мониторинг, корректирующие действия, записи и верификация.",
-    href: "/standards/haccp/",
+    href: "/ru/standards/haccp/",
   },
   {
     title: "Интегрированная система",
     tag: "IMS",
-    desc: "ISO 9001 + 14001 + 45001 в одном пакете документов и процессах.",
-    href: "/services/certification/",
+    desc: "ISO 9001 + 14001 + 45001 — единый пакет документов и процессов.",
+    href: "/ru/services/certification/",
   },
 ];
 
 const why = [
-  { title: "Доверие рынка", desc: "Выше шанс пройти тендеры и требования клиентов." },
+  { title: "Доверие рынка", desc: "Проще проходить тендеры и соответствовать требованиям клиентов." },
   { title: "Порядок в процессах", desc: "Понятные роли, процедуры и контроль." },
-  { title: "Меньше рисков", desc: "Снижение инцидентов, брака и потерь." },
-  { title: "Готовность к аудитам", desc: "Записи, доказательства и внутренняя проверка." },
+  { title: "Меньше рисков", desc: "Снижение инцидентов, потерь и дефектов." },
+  { title: "Готовность к аудиту", desc: "Записи, доказательства и внутренние проверки." },
 ];
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">ISO • Compliance</div>
+      <div class="kicker">ISO • Стандарты</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
       <p class="p" style="max-width:940px;">
-        Поможем выбрать стандарт(ы) под вашу отрасль и цель, подготовим документацию,
-        обучим персонал и проведём внутренний аудит — чтобы вы уверенно прошли сертификацию.
+        Помогаем выбрать стандарты под вашу отрасль и цель, готовим документацию,
+        обучаем персонал и проводим внутренний аудит — чтобы вы уверенно прошли сертификацию.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/ru/contact/">Подобрать стандарт</a>
+        <a class="btn primary" href="/ru/contact/">Получить консультацию</a>
         <a class="btn" href="/ru/services/">Посмотреть услуги</a>
       </div>
 
-      <div class="grid" style="margin-top:22px;">
+      <div class="grid grid-auto" style="margin-top:22px;">
         {standards.map((s) => (
-          <a class="card" href={s.href} style="grid-column: span 4;">
+          <a class="card" href={s.href}>
             <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
               <div style="font-weight:900; line-height:1.2;">{s.title}</div>
               <span class="kicker" style="white-space:nowrap;">{s.tag}</span>
@@ -85,10 +86,11 @@ const why = [
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
-        <div style="font-weight:900;">Зачем компании ISO</div>
-        <div class="grid" style="margin-top:12px;">
+        <div style="font-weight:900;">Зачем нужен ISO</div>
+
+        <div class="grid grid-auto" style="margin-top:12px;">
           {why.map((x) => (
-            <div class="card" style="grid-column: span 3;">
+            <div class="card">
               <div style="font-weight:800;">{x.title}</div>
               <div class="p" style="margin-top:8px;">{x.desc}</div>
             </div>
@@ -104,6 +106,3 @@ const why = [
     </div>
   </section>
 </BaseLayout>
-
-
-

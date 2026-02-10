@@ -1,57 +1,57 @@
-?---
+---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 
-const title = "Аудит";
+const title = "Audit";
 const desc =
-  "Внутренние аудиты ISO, gap-анализ, аудит готовности перед сертификацией: отчёт, несоответствия, CAPA и план улучшений.";
+  "ISO internal audits, gap analysis, and pre-certification readiness audits: report, nonconformities, CAPA, and improvement plan.";
 
 const auditTypes = [
   {
-    title: "Gap-анализ (Audit Readiness)",
-    tag: "1–3 дня",
+    title: "Gap Analysis (Audit Readiness)",
+    tag: "1–3 days",
     points: [
-      "Оценка текущего состояния vs требования ISO",
-      "Перечень несоответствий и рисков",
-      "План работ по закрытию пробелов",
-      "Приоритеты и быстрые улучшения",
+      "Compare the current state against ISO requirements",
+      "List of gaps, nonconformities, and risks",
+      "Work plan to close the gaps",
+      "Priorities and quick wins",
     ],
   },
   {
-    title: "Внутренний аудит ISO",
-    tag: "по плану",
+    title: "ISO Internal Audit",
+    tag: "as planned",
     points: [
-      "План и программа аудита",
-      "Интервью, выборка записей, наблюдения",
-      "Отчёт с доказательствами",
-      "Несоответствия/наблюдения + CAPA",
+      "Audit plan and audit program",
+      "Interviews, sampling of records, observations",
+      "Evidence-based audit report",
+      "Findings/nonconformities + CAPA",
     ],
   },
   {
-    title: "Предсертификационный аудит",
-    tag: "перед внешним",
+    title: "Pre-certification Audit",
+    tag: "before external audit",
     points: [
-      "Проверка готовности на 80–90%",
-      "Проверка записей и практики внедрения",
-      "Подготовка персонала к интервью",
-      "Финальный чек-лист готовности",
+      "80–90% readiness check",
+      "Records and practical implementation review",
+      "Prepare staff for interviews",
+      "Final readiness checklist",
     ],
   },
 ];
 
 const deliverables = [
-  "Отчёт аудита (структурированный, понятный)",
-  "Список несоответствий и наблюдений",
-  "CAPA-план (корректирующие действия) с ответственными и сроками",
-  "Рекомендации по улучшениям (быстрые и системные)",
-  "При необходимости — шаблоны/чек-листы под ваш стандарт",
+  "Audit report (structured and clear)",
+  "List of findings: nonconformities and observations",
+  "CAPA plan (owners and due dates)",
+  "Improvement recommendations",
+  "If needed — templates/checklists",
 ];
 
 const inputs = [
-  "Какой стандарт(ы): ISO 9001 / 14001 / 45001 / 22000 / HACCP",
-  "Отрасль и процессы (кратко)",
-  "Количество площадок/участков",
-  "Число сотрудников (примерно)",
-  "Желаемые сроки и формат (очно/онлайн)",
+  "Which standard(s): ISO 9001 / 14001 / 45001 / 22000 / HACCP",
+  "Industry and key processes (brief)",
+  "Number of sites/locations",
+  "Headcount (approx.)",
+  "Preferred timeline and format (on-site/online)",
 ];
 ---
 
@@ -62,27 +62,27 @@ const inputs = [
       <div class="kicker">Audit • ISO</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:940px;">
-        Аудит помогает увидеть реальную картину: что работает, что не работает и что мешает пройти сертификацию.
-        Мы даём не «критику ради критики», а понятный план действий: несоответствия, риски, CAPA и приоритеты.
+        An audit shows the real picture: what works, what doesn’t, and what blocks certification.
+        We don’t “criticize for the sake of criticism” — we deliver a clear action plan: findings, risks, CAPA, and priorities.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/en/contact/">Запросить аудит</a>
-        <a class="btn" href="/en/services/certification/">Нужно внедрение ISO</a>
+        <a class="btn primary" href="/en/contact/">Request an audit</a>
+        <a class="btn" href="/en/services/certification/">Need ISO implementation</a>
       </div>
 
-      <div class="grid" style="margin-top:22px;">
-        <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:900;">Понятный отчёт</div>
-          <div class="p">Факты, доказательства, несоответствия и рекомендации — без воды.</div>
+      <div class="grid grid-auto" style="margin-top:22px;">
+        <div class="card">
+          <div style="font-weight:900;">Clear reporting</div>
+          <div class="p">Facts, evidence, findings, and recommendations — concise and actionable.</div>
         </div>
-        <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:900;">CAPA-план</div>
-          <div class="p">Конкретные действия, сроки и ответственные — чтобы закрыть пробелы.</div>
+        <div class="card">
+          <div style="font-weight:900;">CAPA plan</div>
+          <div class="p">Concrete actions, deadlines, and owners.</div>
         </div>
-        <div class="card" style="grid-column: span 4;">
-          <div style="font-weight:900;">Готовность к аудитам</div>
-          <div class="p">Подготовим к внешнему аудиту: записи, интервью, чек-листы.</div>
+        <div class="card">
+          <div style="font-weight:900;">Certification readiness</div>
+          <div class="p">We prepare records, interviews, and checklists for the external audit.</div>
         </div>
       </div>
     </div>
@@ -92,14 +92,14 @@ const inputs = [
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
-        <div style="font-weight:900; font-size:18px;">Виды аудита</div>
+        <div style="font-weight:900; font-size:18px;">Audit options</div>
         <p class="p" style="margin-top:10px; max-width:940px;">
-          Выберите формат под задачу. Если не уверены — мы подскажем, что эффективнее: gap-анализ, внутренний аудит или предсертификационная проверка.
+          Choose the format that fits your goal. If you’re not sure — we’ll recommend the best option.
         </p>
 
-        <div class="grid" style="margin-top:16px;">
+        <div class="grid grid-auto" style="margin-top:16px;">
           {auditTypes.map((a) => (
-            <div class="card" style="grid-column: span 4;">
+            <div class="card">
               <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
                 <div style="font-weight:900; line-height:1.2;">{a.title}</div>
                 <span class="kicker" style="white-space:nowrap;">{a.tag}</span>
@@ -112,8 +112,8 @@ const inputs = [
         </div>
 
         <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/contact/">Получить предложение</a>
-          <a class="btn" href="/en/faq/">Посмотреть FAQ</a>
+          <a class="btn primary" href="/en/contact/">Get a quotation</a>
+          <a class="btn" href="/en/faq/">View FAQ</a>
         </div>
       </div>
     </div>
@@ -122,46 +122,43 @@ const inputs = [
   <!-- DELIVERABLES + INPUTS -->
   <section class="section" style="padding-top:0;">
     <div class="container">
-      <div class="grid">
-        <div class="card" style="grid-column: span 6;">
-          <div style="font-weight:900;">Что вы получаете</div>
+      <div class="grid grid-auto">
+        <div class="card">
+          <div style="font-weight:900;">What you get</div>
           <ul style="margin:12px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
             {deliverables.map((x) => <li>{x}</li>)}
           </ul>
         </div>
 
-        <div class="card" style="grid-column: span 6;">
-          <div style="font-weight:900;">Что нужно от вас</div>
+        <div class="card">
+          <div style="font-weight:900;">What we need from you</div>
           <ul style="margin:12px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
             {inputs.map((x) => <li>{x}</li>)}
           </ul>
 
           <div style="margin-top:14px; border-top:1px solid var(--line); padding-top:12px;">
-            <div style="font-weight:800;">Частый сценарий</div>
+            <div style="font-weight:800;">Common scenario</div>
             <div class="p" style="margin-top:8px;">
-              Обучение + аудит готовности → команда понимает требования и сразу закрепляет их практикой.
+              Training + readiness audit → the team understands requirements and applies them in practice.
             </div>
             <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
-              <a class="btn" href="/en/training/">Посмотреть обучение</a>
-              <a class="btn primary" href="/en/contact/">Собрать программу</a>
+              <a class="btn" href="/en/training/">View training</a>
+              <a class="btn primary" href="/en/contact/">Let’s build a program</a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px;">
-        <div style="font-weight:900;">Готовы начать?</div>
+        <div style="font-weight:900;">Ready to start?</div>
         <p class="p" style="margin-top:10px; max-width:940px;">
-          Оставьте заявку — мы уточним детали и предложим оптимальный формат аудита под ваш стандарт и отрасль.
+          Send a request — we’ll уточнить детали and propose the right audit format.
         </p>
         <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/contact/">Запросить аудит</a>
-          <a class="btn" href="/en/services/">Все услуги</a>
+          <a class="btn primary" href="/en/contact/">Request an audit</a>
+          <a class="btn" href="/en/services/">All services</a>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-
-

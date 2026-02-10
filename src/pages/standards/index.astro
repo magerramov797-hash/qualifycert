@@ -53,23 +53,25 @@ const why = [
 ---
 
 <BaseLayout title={title} description={desc}>
+  <!-- HERO -->
   <section class="section">
     <div class="container">
-      <div class="kicker">ISO • Compliance</div>
+      <div class="kicker">ISO • Standartlar</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
       <p class="p" style="max-width:940px;">
         Sahənizə və məqsədinizə uyğun standartları seçməyə kömək edirik, sənədləşməni hazırlayırıq,
         personalı öyrədir və daxili audit keçiririk — sertifikasiyadan inamla keçəsiniz.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/contact/">Standart seçin</a>
+        <a class="btn primary" href="/contact/">Məsləhət alın</a>
         <a class="btn" href="/services/">Xidmətlərə baxın</a>
       </div>
 
-      <div class="grid" style="margin-top:22px;">
+      <div class="grid grid-auto" style="margin-top:22px;">
         {standards.map((s) => (
-          <a class="card" href={s.href} style="grid-column: span 4;">
+          <a class="card" href={s.href}>
             <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
               <div style="font-weight:900; line-height:1.2;">{s.title}</div>
               <span class="kicker" style="white-space:nowrap;">{s.tag}</span>
@@ -82,13 +84,15 @@ const why = [
     </div>
   </section>
 
+  <!-- WHY -->
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
         <div style="font-weight:900;">Niyə ISO lazımdır</div>
-        <div class="grid" style="margin-top:12px;">
+
+        <div class="grid grid-auto" style="margin-top:12px;">
           {why.map((x) => (
-            <div class="card" style="grid-column: span 3;">
+            <div class="card">
               <div style="font-weight:800;">{x.title}</div>
               <div class="p" style="margin-top:8px;">{x.desc}</div>
             </div>

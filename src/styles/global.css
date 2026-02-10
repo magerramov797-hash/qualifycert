@@ -147,7 +147,7 @@ summary:focus-visible {
 }
 
 /* =========================
-   GRID
+   GRID (BASE + CARD MODE)
    ========================= */
 .grid {
   display: grid;
@@ -157,6 +157,11 @@ summary:focus-visible {
 
 .grid > * {
   min-width: 0;
+}
+
+/* ✅ Card sections: auto-fit grid that won't squeeze cards on ~768px */
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 /* =========================
@@ -271,19 +276,7 @@ li { line-height: 1.5; }
 
 /* tablet */
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  /* IMPORTANT: neutralize inline grid-column spans on small screens */
-  .grid > * {
-    grid-column: span 1 !important;
-  }
-  .grid > *[style*="span 12"] {
-    grid-column: 1 / -1 !important;
-  }
-
+  .grid { gap: 16px; }
   .section { padding: 56px 0; }
 
   /* Header menu switch */
@@ -294,14 +287,7 @@ li { line-height: 1.5; }
 
 /* mobile */
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .grid > * {
-    grid-column: 1 / -1 !important;
-  }
+  .grid { gap: 14px; }
 
   .section { padding: 48px 0; }
   .container { width: calc(100% - 32px); }
@@ -318,6 +304,13 @@ li { line-height: 1.5; }
   .container { width: calc(100% - 24px); }
   .section { padding: 40px 0; }
   .btn { padding: 12px 14px; }
+}
+
+/* very small screens */
+@media (max-width: 360px) {
+  .grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 /* =========================

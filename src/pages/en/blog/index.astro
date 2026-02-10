@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const title = "Articles";
+const desc =
+  "Practical ISO materials: standard explanations, audit preparation, checklists, and actionable guidance.";
+
+const posts = [
+  {
+    title: "ISO 9001: where to start implementation",
+    tag: "ISO 9001",
+    excerpt:
+      "A step-by-step approach: diagnostics, process setup, KPIs, risks, documentation, and internal audits.",
+  },
+  {
+    title: "ISO 45001: common occupational health & safety mistakes",
+    tag: "ISO 45001",
+    excerpt:
+      "Typical gaps include risk assessment, training, incident investigations, records, and contractor control.",
+  },
+  {
+    title: "ISO 22000 vs HACCP: what’s the difference?",
+    tag: "Food Safety",
+    excerpt:
+      "How PRPs, OPRPs, and CCPs connect — and why ISO 22000 goes beyond a basic HACCP plan.",
+  },
+];
+---
+
+<BaseLayout title={title} description={desc}>
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Blog</div>
+
+      <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
+      <p class="p" style="max-width:900px;">
+        Here we share practical ISO materials to help you understand requirements,
+        prepare for audits, and apply standards effectively. The articles are based on real implementation experience.
+      </p>
+
+      <div class="grid grid-auto" style="margin-top:22px;">
+        {posts.map((p) => (
+          <article class="card">
+            <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
+              <h2 style="font-weight:900; line-height:1.2; font-size:18px; margin:0;">
+                {p.title}
+              </h2>
+              <span class="kicker" style="white-space:nowrap;">{p.tag}</span>
+            </div>
+
+            <p class="p" style="margin-top:10px;">{p.excerpt}</p>
+
+            <div style="margin-top:14px;">
+              <a class="btn" href="/en/contact/">Ask a question</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

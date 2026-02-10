@@ -1,48 +1,49 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 const title = "FAQ";
-const desc = "Ответы на частые вопросы про ISO-сертификацию, аудит и обучение: сроки, стоимость, этапы и документы.";
+const desc =
+  "Answers to frequently asked questions about ISO certification, audits, and training: timelines, costs, steps, and documentation.";
 
 const faq = [
   {
-    q: "Сколько времени занимает подготовка к сертификации ISO?",
-    a: "Зависит от стандарта, размера компании и текущей готовности. Обычно: экспресс-подготовка — от 2–4 недель, полноценное внедрение — 1–3 месяца и больше. Начинаем с диагностики и даём реалистичный план по срокам.",
+    q: "How long does ISO certification preparation take?",
+    a: "The timeline depends on the standard, company size, and current readiness level. Typically: express preparation takes 2–4 weeks, while full implementation takes 1–3 months or more. We start with a diagnostic assessment and provide a realistic plan.",
   },
   {
-    q: "Вы выдаёте сертификат сами или готовите к сертификации?",
-    a: "Мы готовим компанию: система, документы, обучение, внутренний аудит и готовность. Сертификат выдаёт сертификационный орган (CB). При необходимости поможем выбрать орган и пройти сертификационный аудит.",
+    q: "Do you issue the certificate or only prepare the company?",
+    a: "We prepare the company: management system, documentation, training, internal audit, and readiness. The certificate itself is issued by an accredited certification body (CB). We can assist with CB selection and certification audit support.",
   },
   {
-    q: "Какие стандарты вы внедряете?",
-    a: "Чаще всего: ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP. Также можем внедрить интегрированную систему (9001+14001+45001) под ваш бизнес.",
+    q: "Which standards do you work with?",
+    a: "Most commonly: ISO 9001, ISO 14001, ISO 45001, ISO 22000, and HACCP. We also implement integrated management systems (ISO 9001 + 14001 + 45001).",
   },
   {
-    q: "С чего начинается работа?",
-    a: "С короткого сбора вводных и диагностики (gap-анализ): процессы, риски, требования, текущие документы. После этого формируем план: этапы, сроки, ответственные и перечень документов.",
+    q: "How does the project start?",
+    a: "With a brief information review and diagnostic (gap analysis): processes, risks, standard requirements, and existing documentation. Then we prepare a clear plan with stages, timelines, responsibilities, and document lists.",
   },
   {
-    q: "Сколько стоит внедрение ISO?",
-    a: "Стоимость зависит от отрасли, числа сотрудников/площадок, выбранных стандартов и степени готовности. Чтобы посчитать точно, нам нужны: отрасль, стандарты, число сотрудников, сроки. Мы отправим коммерческое предложение.",
+    q: "How much does ISO implementation cost?",
+    a: "The cost depends on the industry, number of employees/sites, selected standards, and readiness level. To calculate accurately, we need basic input data. We provide a commercial proposal.",
   },
   {
-    q: "Что входит в результат работ?",
-    a: "План проекта, пакет документации под вашу компанию, обучение персонала, внутренний аудит, план корректирующих действий (CAPA) и рекомендации по улучшению. Всё — в формате, который удобно использовать.",
+    q: "What will we receive at the end of the project?",
+    a: "A project plan, tailored documentation package, staff training, internal audit, CAPA plan, and improvement recommendations — all in a practical, usable format.",
   },
   {
-    q: "Вы проводите внутренний аудит?",
-    a: "Да. Проводим внутренние аудиты по ISO, gap-анализ перед сертификацией, аудит поставщиков (по запросу). По итогам выдаём отчёт, несоответствия и план действий.",
+    q: "Do you conduct internal audits?",
+    a: "Yes. We conduct ISO internal audits, pre-certification gap analyses, and supplier audits if required. You receive a report, nonconformities, and corrective action plans.",
   },
   {
-    q: "Можно ли сделать только обучение без внедрения?",
-    a: "Да. Есть обучение для руководителей, ответственных за ISO, внутренних аудиторов и персонала. Формат — теория + практика, чек-листы и примеры документов.",
+    q: "Is it possible to take training only?",
+    a: "Yes. We provide training for management, ISO responsible persons, internal auditors, and staff. Format includes theory, practice, checklists, and document samples.",
   },
   {
-    q: "Нужно ли внедрять сразу несколько стандартов?",
-    a: "Не всегда. Часто выгодно объединять ISO 9001 + ISO 14001 + ISO 45001 в интегрированную систему — меньше дублирования документов и проще управление. Но решение зависит от задач компании.",
+    q: "Do we need to implement several standards at once?",
+    a: "Not always. Often, integrating ISO 9001 + 14001 + 45001 is beneficial as it reduces duplication and simplifies management. The decision depends on company goals.",
   },
   {
-    q: "Как подготовиться к сертификационному аудиту?",
-    a: "Мы проводим внутренний аудит, проверяем записи, готовим персонал к интервью, закрываем несоответствия через CAPA и делаем финальную проверку готовности. После этого компания уверенно проходит сертификационный аудит.",
+    q: "How do you prepare for a certification audit?",
+    a: "We conduct an internal audit, review records, prepare staff for interviews, close nonconformities through CAPA, and perform a final readiness check.",
   },
 ];
 ---
@@ -50,11 +51,12 @@ const faq = [
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">Частые вопросы</div>
+      <div class="kicker">Frequently Asked Questions</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
       <p class="p" style="max-width:900px;">
-        Здесь ответы на самые популярные вопросы по сертификации ISO, аудитам и обучению.
-        Если вашего вопроса нет — напишите нам, и мы добавим его в FAQ.
+        Here you’ll find answers to the most common questions about ISO certification,
+        audits, and training. If your question is not listed — feel free to contact us.
       </p>
 
       <div class="grid" style="margin-top:22px;">
@@ -71,18 +73,15 @@ const faq = [
       </div>
 
       <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Нужен быстрый расчёт?</div>
+        <div style="font-weight:800;">Need a quick estimate?</div>
         <p class="p" style="margin-top:10px; max-width:900px;">
-          Оставьте заявку — мы уточним детали и отправим план работ и стоимость.
+          Send us an inquiry — we’ll clarify the details and share a project plan and pricing.
         </p>
         <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/contact/">Получить коммерческое</a>
-          <a class="btn" href="/en/services/">Посмотреть услуги</a>
+          <a class="btn primary" href="/en/contact/">Request a proposal</a>
+          <a class="btn" href="/en/services/">View services</a>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-
-

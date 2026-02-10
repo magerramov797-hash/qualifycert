@@ -1,9 +1,9 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
 const title = "О компании";
 const desc =
-  "Консалтинг по ISO: сертификация, аудит и обучение. Практичный подход, понятные процессы, измеримый результат.";
+  "ISO-консалтинг: подготовка к сертификации, аудит и обучение. Практичный подход, понятные процессы, измеримый результат.";
 ---
 
 <BaseLayout title={title} description={desc}>
@@ -14,28 +14,29 @@ const desc =
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
 
       <p class="p" style="max-width:900px;">
-        Мы помогаем компаниям внедрять и поддерживать системы менеджмента по международным стандартам ISO так,
-        чтобы они реально работали в бизнесе, а не существовали только «для сертификата».
+        Мы помогаем компаниям внедрять и поддерживать системы менеджмента по ISO так,
+        чтобы они работали в реальном бизнесе, а не были «бумагой» только ради сертификата.
       </p>
 
-      <div class="grid" style="margin-top:22px;">
-        <div class="card" style="grid-column: span 4;">
+      <!-- 3 cards (auto grid) -->
+      <div class="grid grid-auto" style="margin-top:22px;">
+        <div class="card">
           <div style="font-weight:800;">Чем занимаемся</div>
           <p class="p">
-            Сертификация ISO, внутренние и предсертификационные аудиты,
+            Подготовка к ISO-сертификации, внутренние и предсертификационные аудиты,
             обучение персонала и внедрение систем менеджмента.
           </p>
         </div>
 
-        <div class="card" style="grid-column: span 4;">
+        <div class="card">
           <div style="font-weight:800;">Наш подход</div>
           <p class="p">
-            Начинаем с диагностики, затем строим систему под процессы компании,
-            обучаем сотрудников и проверяем результативность через аудит.
+            Начинаем с диагностики, затем настраиваем систему под процессы компании,
+            обучаем сотрудников и проверяем результат аудитом.
           </p>
         </div>
 
-        <div class="card" style="grid-column: span 4;">
+        <div class="card">
           <div style="font-weight:800;">Что получает клиент</div>
           <p class="p">
             Понятные процессы, управляемые риски, готовность к аудитам,
@@ -44,57 +45,72 @@ const desc =
         </div>
       </div>
 
+      <!-- How we work -->
       <div class="card" style="margin-top:20px;">
         <div style="font-weight:800; margin-bottom:10px;">Как мы работаем</div>
 
-        <div class="grid">
-          <div style="grid-column: span 3;">
+        <div class="grid grid-auto about-steps">
+          <div class="step">
             <div style="font-weight:700;">1) Диагностика</div>
-            <div class="p">Анализ процессов, рисков, требований стандартов.</div>
+            <div class="p">Анализ процессов, рисков и требований стандарта.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">2) План</div>
-            <div class="p">Этапы, сроки, ответственность и перечень документов.</div>
+            <div class="p">Этапы, сроки, ответственность и список документов.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">3) Внедрение</div>
             <div class="p">Документация, процессы, обучение персонала.</div>
           </div>
 
-          <div style="grid-column: span 3;">
+          <div class="step">
             <div style="font-weight:700;">4) Проверка</div>
             <div class="p">Внутренний аудит, корректирующие действия, готовность.</div>
           </div>
         </div>
       </div>
 
+      <!-- Why trust -->
       <div class="card" style="margin-top:20px;">
         <div style="font-weight:800;">Почему нам доверяют</div>
-        <ul
-          style="
-            margin:10px 0 0;
-            padding-left:18px;
-            color: var(--muted);
-            display:grid;
-            gap:6px;
-          "
-        >
+        <ul class="p about-list">
           <li>Практический опыт внедрения ISO в разных отраслях</li>
-          <li>Фокус на реальную работу системы, а не формальность</li>
-          <li>Понятный язык без лишней бюрократии</li>
+          <li>Фокус на реально работающих системах, а не формальности</li>
+          <li>Простой и понятный язык, без лишней бюрократии</li>
           <li>Сопровождение до полной готовности к аудиту</li>
         </ul>
       </div>
 
-      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="/ru/contact/">Получить консультацию</a>
-        <a class="btn" href="/ru/services/">Наши услуги</a>
+      <!-- CTA -->
+      <div class="grid grid-auto" style="margin-top:18px; justify-items:center; max-width:520px;">
+        <a class="btn primary" href="/ru/contact/" style="width:100%;">Получить консультацию</a>
+        <a class="btn" href="/ru/services/" style="width:100%;">Наши услуги</a>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    /* Make steps look tighter inside the card */
+    .about-steps{
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .about-steps .step{
+      padding: 12px;
+      border: 1px dashed rgba(15,23,42,.10);
+      border-radius: 14px;
+      background: rgba(255,255,255,.55);
+    }
+
+    .about-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+  </style>
 </BaseLayout>
-
-
-

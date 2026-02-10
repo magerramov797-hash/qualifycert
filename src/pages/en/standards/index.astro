@@ -1,81 +1,82 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const title = "Стандарты";
+const title = "Standards";
 const desc =
-  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 и HACCP: кому подходят, что дают и как мы помогаем подготовиться.";
+  "ISO 9001, ISO 14001, ISO 45001, ISO 22000 and HACCP: compliance, benefits, and the preparation process.";
 
 const standards = [
   {
     title: "ISO 9001",
     tag: "Quality",
-    desc: "Система менеджмента качества: процессы, KPI, риски, несоответствия и улучшения.",
-    href: "/standards/iso-9001/",
+    desc: "Quality management: processes, KPIs, risks, nonconformities, and improvement.",
+    href: "/en/standards/iso-9001/",
   },
   {
     title: "ISO 14001",
     tag: "Environment",
-    desc: "Экология: аспекты и воздействия, соблюдение требований, цели и программы.",
-    href: "/standards/iso-14001/",
+    desc: "Environmental management: aspects & impacts, compliance, objectives, and programs.",
+    href: "/en/standards/iso-14001/",
   },
   {
     title: "ISO 45001",
     tag: "OH&S",
-    desc: "Охрана труда: опасности, оценка рисков, обучение, расследования, контроль.",
-    href: "/standards/iso-45001/",
+    desc: "Occupational health & safety: hazards, risk assessment, training, investigations, control.",
+    href: "/en/standards/iso-45001/",
   },
   {
     title: "ISO 22000",
     tag: "Food Safety",
-    desc: "Пищевая безопасность: PRP, анализ опасностей, OPRP/CCP, управление рисками.",
-    href: "/standards/iso-22000/",
+    desc: "Food safety: PRPs, hazard analysis, OPRPs/CCPs, risk management.",
+    href: "/en/standards/iso-22000/",
   },
   {
     title: "HACCP",
     tag: "Food Safety",
-    desc: "План HACCP: CCP, мониторинг, корректирующие действия, записи и верификация.",
-    href: "/standards/haccp/",
+    desc: "HACCP plan: CCPs, monitoring, corrective actions, records, and verification.",
+    href: "/en/standards/haccp/",
   },
   {
-    title: "Интегрированная система",
+    title: "Integrated management system",
     tag: "IMS",
-    desc: "ISO 9001 + 14001 + 45001 в одном пакете документов и процессах.",
-    href: "/services/certification/",
+    desc: "ISO 9001 + 14001 + 45001 — one documentation set and aligned processes.",
+    href: "/en/services/certification/",
   },
 ];
 
 const why = [
-  { title: "Доверие рынка", desc: "Выше шанс пройти тендеры и требования клиентов." },
-  { title: "Порядок в процессах", desc: "Понятные роли, процедуры и контроль." },
-  { title: "Меньше рисков", desc: "Снижение инцидентов, брака и потерь." },
-  { title: "Готовность к аудитам", desc: "Записи, доказательства и внутренняя проверка." },
+  { title: "Market trust", desc: "Stronger compliance for tenders and customer requirements." },
+  { title: "Process discipline", desc: "Clear roles, procedures, and control." },
+  { title: "Lower risk", desc: "Fewer incidents, losses, and defects." },
+  { title: "Audit readiness", desc: "Records, evidence, and internal checks." },
 ];
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
     <div class="container">
-      <div class="kicker">ISO • Compliance</div>
+      <div class="kicker">ISO • Standards</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
+
       <p class="p" style="max-width:940px;">
-        Поможем выбрать стандарт(ы) под вашу отрасль и цель, подготовим документацию,
-        обучим персонал и проведём внутренний аудит — чтобы вы уверенно прошли сертификацию.
+        We help you choose the right standards for your industry and goals, prepare documentation,
+        train staff, and run internal audits — so you can pass certification confidently.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/en/contact/">Подобрать стандарт</a>
-        <a class="btn" href="/en/services/">Посмотреть услуги</a>
+        <a class="btn primary" href="/en/contact/">Get advice</a>
+        <a class="btn" href="/en/services/">View services</a>
       </div>
 
-      <div class="grid" style="margin-top:22px;">
+      <div class="grid grid-auto" style="margin-top:22px;">
         {standards.map((s) => (
-          <a class="card" href={s.href} style="grid-column: span 4;">
+          <a class="card" href={s.href}>
             <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
               <div style="font-weight:900; line-height:1.2;">{s.title}</div>
               <span class="kicker" style="white-space:nowrap;">{s.tag}</span>
             </div>
             <p class="p" style="margin-top:10px;">{s.desc}</p>
-            <div style="margin-top:14px; font-weight:700;">Подробнее →</div>
+            <div style="margin-top:14px; font-weight:700;">Learn more →</div>
           </a>
         ))}
       </div>
@@ -85,10 +86,11 @@ const why = [
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
-        <div style="font-weight:900;">Зачем компании ISO</div>
-        <div class="grid" style="margin-top:12px;">
+        <div style="font-weight:900;">Why ISO matters</div>
+
+        <div class="grid grid-auto" style="margin-top:12px;">
           {why.map((x) => (
-            <div class="card" style="grid-column: span 3;">
+            <div class="card">
               <div style="font-weight:800;">{x.title}</div>
               <div class="p" style="margin-top:8px;">{x.desc}</div>
             </div>
@@ -96,14 +98,11 @@ const why = [
         </div>
 
         <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/services/certification/">Подготовка к сертификации</a>
-          <a class="btn" href="/en/services/audit/">Нужен аудит готовности</a>
-          <a class="btn" href="/en/training/">Обучение</a>
+          <a class="btn primary" href="/en/services/certification/">Certification readiness</a>
+          <a class="btn" href="/en/services/audit/">Need a readiness audit</a>
+          <a class="btn" href="/en/training/">Training</a>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-
-

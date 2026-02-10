@@ -1,7 +1,8 @@
 ﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Əlaqə";
-const desc = "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu göndərin. Cavab verək və iş planı ilə qiyməti paylaşaq.";
+const desc =
+  "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu göndərin. Cavab verək və iş planı ilə qiyməti paylaşaq.";
 ---
 
 <BaseLayout title={title} description={desc}>
@@ -14,20 +15,21 @@ const desc = "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu gönd�
         müddət və qiyməti göndərək.
       </p>
 
-      <div class="grid" style="margin-top:22px;">
-        <!-- Левая колонка -->
-        <div class="card" style="grid-column: span 5;">
+      <!-- Layout: left info + right form (responsive without breaking) -->
+      <div class="grid contact-layout" style="margin-top:22px;">
+        <!-- Left -->
+        <div class="card contact-left">
           <div style="font-weight:700; margin-bottom:10px;">Əlaqə məlumatları</div>
 
           <div style="display:grid; gap:10px;">
             <div>
               <div style="font-size:13px; color: var(--muted);">Telefon</div>
-              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+              <div style="font-weight:600;">+994 70 857 28 17</div>
             </div>
 
             <div>
               <div style="font-size:13px; color: var(--muted);">WhatsApp</div>
-              <div style="font-weight:600;">+994 XX XXX XX XX</div>
+              <div style="font-weight:600;">+994 70 857 28 17</div>
             </div>
 
             <div>
@@ -43,53 +45,50 @@ const desc = "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu gönd�
 
           <div style="margin-top:18px; border-top:1px solid var(--line); padding-top:14px;">
             <div style="font-weight:700; margin-bottom:8px;">Nəyi soruşa bilərsiniz</div>
-            <ul style="margin:0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
+            <ul class="p contact-list">
               <li>ISO hazırlıq planı və müddətlər</li>
               <li>Kommersiya təklifi</li>
               <li>Hazırlıq auditi (gap-analiz)</li>
               <li>Personal üçün təlim proqramı</li>
             </ul>
           </div>
+
+          <div class="grid grid-auto" style="margin-top:14px; justify-items:center;">
+            <a class="btn" href="mailto:info@qualifycert.com" style="width:100%;">E-poçtla yazın</a>
+            <a class="btn" href="tel:+994708572817" style="width:100%;">Zəng edin</a>
+          </div>
         </div>
 
-        <!-- Правая колонка -->
-        <div class="card" style="grid-column: span 7;">
+        <!-- Right -->
+        <div class="card contact-right">
           <div style="font-weight:700; margin-bottom:10px;">Sorğu göndərin</div>
 
           <form method="post">
-            <div class="grid">
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Ad</label>
-                <input name="name" required
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="Adınız" />
+            <!-- Form fields: auto grid (2 columns when possible) -->
+            <div class="grid grid-auto form-grid">
+              <div>
+                <label class="field-label" for="name">Ad</label>
+                <input id="name" name="name" required class="field" placeholder="Adınız" />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Şirkət</label>
-                <input name="company"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="Şirkət adı" />
+              <div>
+                <label class="field-label" for="company">Şirkət</label>
+                <input id="company" name="company" class="field" placeholder="Şirkət adı" />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Telefon / WhatsApp</label>
-                <input name="phone" required
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="+994..." />
+              <div>
+                <label class="field-label" for="phone">Telefon / WhatsApp</label>
+                <input id="phone" name="phone" required class="field" placeholder="+994..." />
               </div>
 
-              <div style="grid-column: span 6;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Email</label>
-                <input name="email" type="email"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none;"
-                  placeholder="email@company.com" />
+              <div>
+                <label class="field-label" for="email">Email</label>
+                <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
               </div>
 
-              <div style="grid-column: span 12;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Maraqlıdır</label>
-                <select name="topic"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; background:#fff;">
+              <div class="span-2">
+                <label class="field-label" for="topic">Maraqlıdır</label>
+                <select id="topic" name="topic" class="field field-select">
                   <option>ISO sertifikatlaşdırma</option>
                   <option>Audit</option>
                   <option>Təlim</option>
@@ -100,17 +99,23 @@ const desc = "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu gönd�
                 </select>
               </div>
 
-              <div style="grid-column: span 12;">
-                <label style="font-size:13px; color: var(--muted); display:block; margin-bottom:6px;">Mesaj</label>
-                <textarea name="message" rows="5"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); outline:none; resize:vertical;"
-                  placeholder="Qısa təsvir: sahə, işçi sayı, müddətlər..."></textarea>
+              <div class="span-2">
+                <label class="field-label" for="message">Mesaj</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="field"
+                  style="resize:vertical;"
+                  placeholder="Qısa təsvir: sahə, işçi sayı, müddətlər..."
+                ></textarea>
               </div>
             </div>
 
-            <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap;">
-              <button class="btn primary" type="submit">Sorğunu göndər</button>
-              <a class="btn" href="/services/">Xidmətlərə baxın</a>
+            <!-- Actions -->
+            <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
+              <button class="btn primary" type="submit" style="width:100%;">Sorğunu göndər</button>
+              <a class="btn" href="/services/" style="width:100%;">Xidmətlərə baxın</a>
             </div>
 
             <p class="p" style="font-size:13px; margin-top:12px;">
@@ -121,4 +126,68 @@ const desc = "ISO sertifikatlaşdırma, audit və ya təlim üzrə sorğu gönd�
       </div>
     </div>
   </section>
+
+  <style is:global>
+    /* Layout (left + right) */
+    .contact-layout{
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .contact-left{ grid-column: span 5; }
+    .contact-right{ grid-column: span 7; }
+
+    @media (max-width: 900px){
+      .contact-left,
+      .contact-right{
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Lists */
+    .contact-list{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    /* Form fields */
+    .form-grid{
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    /* Full width blocks inside auto grid */
+    .span-2{
+      grid-column: 1 / -1;
+    }
+
+    .field-label{
+      font-size: 13px;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .field{
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      outline: none;
+      background: #fff;
+      color: var(--text);
+    }
+
+    .field:focus{
+      border-color: rgba(37,99,235,.35);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+    }
+
+    .field-select{
+      appearance: none;
+    }
+  </style>
 </BaseLayout>

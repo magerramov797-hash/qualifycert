@@ -1,28 +1,28 @@
-?---
+---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const title = "Услуги";
+const title = "Services";
 const desc =
-  "Сертификация ISO, аудит и обучение: диагностика, внедрение, внутренний аудит и подготовка к сертификации.";
+  "ISO certification, audits, and training: diagnostics, implementation, internal audits, and certification readiness.";
 
 const services = [
   {
-    title: "Сертификация ISO",
-    desc: "Подготовка к ISO 9001, 14001, 45001, 22000 и HACCP. Внедрение, обучение, внутренний аудит, готовность.",
-    href: "/services/certification/",
-    tag: "Основная услуга",
+    title: "ISO Certification",
+    desc: "Preparation for ISO 9001, 14001, 45001, 22000, and HACCP. Implementation, training, internal audits, and certification readiness.",
+    href: "/en/services/certification/",
+    tag: "Core service",
   },
   {
-    title: "Аудит",
-    desc: "Gap-анализ, внутренние аудиты, аудит готовности перед сертификацией. Отчёт, несоответствия, CAPA-план.",
-    href: "/services/audit/",
-    tag: "Проверка и улучшение",
+    title: "Audit",
+    desc: "Gap analysis, internal audits, and pre-certification readiness checks. Reporting, nonconformities, and a CAPA plan.",
+    href: "/en/services/audit/",
+    tag: "Assessment & improvement",
   },
   {
-    title: "Обучение",
-    desc: "Обучение персонала и внутренних аудиторов: требования ISO, практика, чек-листы, разбор кейсов.",
-    href: "/services/training/",
-    tag: "Практика",
+    title: "Training",
+    desc: "Training for staff and internal auditors: ISO requirements, hands-on practice, checklists, and real scenarios.",
+    href: "/en/services/training/",
+    tag: "Practical",
   },
 ];
 ---
@@ -34,107 +34,103 @@ const services = [
       <div class="kicker">ISO • Audit • Training</div>
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
       <p class="p" style="max-width:920px;">
-        Мы помогаем внедрить систему менеджмента так, чтобы она работала в реальности — процессы, ответственность,
-        документы, обучение и проверка через внутренний аудит.
+        We build management systems that actually work — with clear processes,
+        responsibilities, documentation, training, and verification through internal audits.
       </p>
 
       <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn primary" href="/en/contact/">Получить коммерческое</a>
-        <a class="btn" href="/en/standards/">Выбрать стандарт</a>
+        <a class="btn primary" href="/en/contact/">Request a quotation</a>
+        <a class="btn" href="/en/standards/">Choose a standard</a>
       </div>
 
-      <!-- 3 карточки услуг -->
-      <div class="grid" style="margin-top:22px;">
+      <!-- 3 service cards -->
+      <div class="grid grid-auto" style="margin-top:22px;">
         {services.map((s) => (
-          <a class="card" href={s.href} style="grid-column: span 4;">
+          <a class="card" href={s.href}>
             <div style="display:flex; justify-content:space-between; gap:12px; align-items:flex-start;">
               <div style="font-weight:800; line-height:1.2;">{s.title}</div>
-              <span class="kicker" style="white-space:nowrap;">{s.tag}</span>
+              <span class="kicker">{s.tag}</span>
             </div>
             <p class="p" style="margin-top:10px;">{s.desc}</p>
-            <div style="margin-top:14px; font-weight:700;">Подробнее →</div>
+            <div style="margin-top:14px; font-weight:700;">Learn more →</div>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Как работаем -->
+  <!-- How we work -->
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="card">
-        <div style="font-weight:800; margin-bottom:10px;">Как мы работаем</div>
+        <div style="font-weight:800; margin-bottom:10px;">How we work</div>
 
-        <div class="grid">
-          <div style="grid-column: span 3;">
-            <div style="font-weight:700;">1) Диагностика</div>
-            <div class="p">Gap-анализ, контекст, риски, требования и процессы.</div>
+        <div class="grid grid-auto">
+          <div>
+            <div style="font-weight:700;">1) Diagnostics</div>
+            <div class="p">Gap analysis, context, risks, requirements, and processes.</div>
           </div>
 
-          <div style="grid-column: span 3;">
-            <div style="font-weight:700;">2) План</div>
-            <div class="p">Этапы, сроки, ответственные и список документов.</div>
+          <div>
+            <div style="font-weight:700;">2) Plan</div>
+            <div class="p">Stages, timelines, responsibilities, and the documentation list.</div>
           </div>
 
-          <div style="grid-column: span 3;">
-            <div style="font-weight:700;">3) Внедрение</div>
-            <div class="p">Документация, обучение, внедрение процедур и записей.</div>
+          <div>
+            <div style="font-weight:700;">3) Implementation</div>
+            <div class="p">Documentation, training, and rollout of procedures and records.</div>
           </div>
 
-          <div style="grid-column: span 3;">
-            <div style="font-weight:700;">4) Проверка</div>
-            <div class="p">Внутренний аудит, CAPA и подготовка к сертификации.</div>
+          <div>
+            <div style="font-weight:700;">4) Verification</div>
+            <div class="p">Internal audit, CAPA, and readiness for certification.</div>
           </div>
         </div>
 
         <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/contact/">Запросить план и стоимость</a>
-          <a class="btn" href="/en/insights/cases/">Посмотреть кейсы</a>
+          <a class="btn primary" href="/en/contact/">Request a plan & price</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Что нужно от клиента / Что получите -->
+  <!-- What we need / What you get -->
   <section class="section" style="padding-top:0;">
     <div class="container">
-      <div class="grid">
-        <div class="card" style="grid-column: span 6;">
-          <div style="font-weight:800;">Что нам нужно от вас</div>
-          <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-            <li>Отрасль и виды деятельности</li>
-            <li>Число сотрудников и площадок</li>
-            <li>Какие стандарты нужны (или цель проекта)</li>
-            <li>Желаемые сроки</li>
-            <li>Контактное лицо</li>
+      <div class="grid grid-auto">
+        <div class="card">
+          <div style="font-weight:800;">What we need from you</div>
+          <ul class="p" style="margin:10px 0 0; padding-left:18px; display:grid; gap:6px;">
+            <li>Industry and scope of activities</li>
+            <li>Number of employees and sites</li>
+            <li>Required standards (or project goal)</li>
+            <li>Preferred timeline</li>
+            <li>Contact person</li>
           </ul>
         </div>
 
-        <div class="card" style="grid-column: span 6;">
-          <div style="font-weight:800;">Что вы получите</div>
-          <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-            <li>План работ и дорожную карту</li>
-            <li>Пакет документации под компанию</li>
-            <li>Обучение персонала</li>
-            <li>Внутренний аудит и отчёт</li>
-            <li>CAPA (корректирующие действия) и рекомендации</li>
+        <div class="card">
+          <div style="font-weight:800;">What you will get</div>
+          <ul class="p" style="margin:10px 0 0; padding-left:18px; display:grid; gap:6px;">
+            <li>Work plan and roadmap</li>
+            <li>Company-tailored documentation package</li>
+            <li>Staff training</li>
+            <li>Internal audit and report</li>
+            <li>CAPA (corrective actions) and recommendations</li>
           </ul>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Не уверены, что выбрать?</div>
+        <div style="font-weight:800;">Not sure what to choose?</div>
         <p class="p" style="margin-top:10px; max-width:900px;">
-          Напишите вашу отрасль и цель — подскажем, какой стандарт/услуга подходит, и отправим план работ.
+          Tell us your industry and goal — we’ll recommend the right standard/service and send a work plan.
         </p>
         <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/en/contact/">Получить консультацию</a>
-          <a class="btn" href="/en/standards/">Посмотреть стандарты</a>
+          <a class="btn primary" href="/en/contact/">Get a consultation</a>
+          <a class="btn" href="/en/standards/">View standards</a>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-
-

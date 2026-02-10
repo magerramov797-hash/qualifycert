@@ -1,1 +1,79 @@
-﻿
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page not found" description="The page you’re looking for doesn’t exist.">
+  <section class="section nf-wrap">
+    <div class="container nf-box">
+      <div class="kicker nf-kicker">404</div>
+
+      <h1 class="h1 nf-title">Page not found</h1>
+
+      <p class="p nf-desc">
+        The link might be incorrect, or the page may have been moved to a different address.
+      </p>
+
+      <div class="nf-actions">
+        <a class="btn primary nf-btn" href="/en/">Home</a>
+        <a class="btn nf-btn" href="/en/services/">Services</a>
+        <a class="btn nf-btn" href="/en/standards/">Standards</a>
+        <a class="btn nf-btn" href="/en/blog/">Blog</a>
+        <a class="btn nf-btn" href="/en/contact/">Contact</a>
+      </div>
+
+      <div class="card nf-quick">
+        <div class="nf-quick-title">Quick links</div>
+        <div class="nf-quick-links">
+          <a href="/en/services/certification/">ISO readiness</a>
+          <span>•</span>
+          <a href="/en/services/audit/">Audit</a>
+          <span>•</span>
+          <a href="/en/training/">Training</a>
+          <span>•</span>
+          <a href="/en/contact/">Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    .nf-wrap{ min-height:72vh; display:flex; align-items:center; }
+    .nf-box{ max-width:860px; text-align:center; }
+    .nf-kicker{ justify-content:center; margin:0 auto; }
+    .nf-title{ margin-top:14px; }
+    .nf-desc{ margin:10px auto 0; max-width:640px; }
+
+    .nf-actions{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+      gap:12px;
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .nf-actions .nf-btn{ width:100% !important; justify-content:center; }
+
+    .nf-quick{
+      margin:14px auto 0;
+      max-width:760px;
+      text-align:left;
+      padding:18px 20px;
+    }
+    .nf-quick-title{ font-weight:800; }
+    .nf-quick-links{
+      margin-top:10px;
+      color:var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .nf-quick-links span{ opacity:.55; }
+
+    @media (max-width:640px){
+      .nf-wrap{ min-height:auto; }
+      .nf-actions{ grid-template-columns:1fr; }
+    }
+  </style>
+</BaseLayout>

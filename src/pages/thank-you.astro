@@ -6,23 +6,34 @@ const desc = "Müraciətiniz üçün təşəkkürlər. Tezliklə sizinlə əlaq�
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
-    <div class="container">
-      <div class="kicker">Təşəkkürlər</div>
+    <div class="container" style="max-width:900px; text-align:center;">
+      <div class="kicker" style="justify-content:center;">Təşəkkürlər</div>
+
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:780px;">
-        Sorğunuzu aldıq. 1 iş günü ərzində sizinlə əlaqə saxlayacaq, iş planı və qiyməti paylaşacağıq.
+
+      <p class="p" style="max-width:780px; margin:12px auto 0;">
+        Sorğunuzu aldıq. 1 iş günü ərzində sizinlə əlaqə saxlayacaq,
+        iş planı və qiyməti paylaşacağıq.
       </p>
 
-      <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-        <li>Standart və xidmətlər üzrə detalları dəqiqləşdirəcəyik</li>
-        <li>İlkin plan və müddətləri təklif edəcəyik</li>
-        <li>Layihə komandası və növbəti addımlar haqqında məlumat verəcəyik</li>
-      </ul>
+      <div class="card" style="margin:18px auto 0; max-width:760px; text-align:left;">
+        <ul class="p" style="margin:0; padding-left:18px; display:grid; gap:6px;">
+          <li>Standart və xidmətlər üzrə detalları dəqiqləşdirəcəyik</li>
+          <li>İlkin plan və müddətləri təklif edəcəyik</li>
+          <li>Layihə komandası və növbəti addımlar haqqında məlumat verəcəyik</li>
+        </ul>
+      </div>
 
-      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="/services/">Xidmətlərə baxın</a>
-        <a class="btn" href="/insights/">Materialları oxuyun</a>
-        <a class="btn" href="/">Əsas səhifə</a>
+      <div class="grid grid-auto" style="margin-top:18px; justify-items:center;">
+        <a class="btn primary" href="/services/" style="width:100%;">
+          Xidmətlərə baxın
+        </a>
+        <a class="btn" href="/insights/" style="width:100%;">
+          Materialları oxuyun
+        </a>
+        <a class="btn" href="/" style="width:100%;">
+          Əsas səhifə
+        </a>
       </div>
     </div>
   </section>

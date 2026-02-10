@@ -1,27 +1,65 @@
 ﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Cookies siyasəti";
-const desc = "Saytda cookies və analitika fayllarının istifadəsi haqqında məlumat.";
+const desc = "Saytda cookies və analitika texnologiyalarının istifadəsi haqqında məlumat.";
 ---
 
 <BaseLayout title={title} description={desc}>
   <section class="section">
-    <div class="container">
+    <div class="container" style="max-width:920px;">
       <div class="kicker">Sənədlər</div>
+
       <h1 class="h1" style="margin-top:12px;">{title}</h1>
-      <p class="p" style="max-width:920px;">
-        Bu bölmədə cookies siyasəti və istifadə qaydaları yerləşdiriləcək.
-        Sayt tamamlandıqda yekun mətn əlavə ediləcək.
+
+      <p class="p" style="margin-top:10px;">
+        Bu səhifə QualifyCert saytında cookies (çərəzlər) və analitika texnologiyalarının istifadəsi barədə
+        ümumi məlumat verir. Sayt tam istifadəyə verildikdən sonra bu siyasət yenilənə bilər.
       </p>
 
-      <div class="card" style="margin-top:18px;">
-        <div style="font-weight:800;">Qısa xülasə</div>
-        <ul style="margin:10px 0 0; padding-left:18px; color: var(--muted); display:grid; gap:6px;">
-          <li>Saytda istifadə olunan cookies növləri</li>
-          <li>Analitika və performans ölçümü</li>
-          <li>Cookies-lərin idarə olunması</li>
-        </ul>
+      <div class="grid grid-auto" style="margin-top:18px;">
+        <div class="card">
+          <div style="font-weight:800;">Cookies nədir?</div>
+          <p class="p" style="margin-top:8px;">
+            Cookies — brauzerinizdə saxlanılan kiçik fayllardır. Saytın işləməsinə, rahat istifadə təcrübəsinə
+            və (lazım olduqda) analitikaya kömək edir.
+          </p>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;">Nə üçün istifadə olunur?</div>
+          <ul class="p cookies-list">
+            <li>Saytın düzgün işləməsi (texniki cookies)</li>
+            <li>İstifadə rahatlığının artırılması (seçimlərin yadda saxlanması)</li>
+            <li>Ziyarətçi davranışının anonim analizi (analitika cookies)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;">İdarəetmə</div>
+          <p class="p" style="margin-top:8px;">
+            Cookies-i brauzer parametrlərindən məhdudlaşdıra və ya silə bilərsiniz.
+            Qeyd: bəzi cookies deaktiv edildikdə saytın müəyyən funksiyaları düzgün işləməyə bilər.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <div style="font-weight:800;">Əlavə məlumat</div>
+        <p class="p" style="margin-top:8px;">
+          Saytın funksionallığı genişləndikcə və üçüncü tərəf xidmətləri (məsələn, analitika və ölçmə alətləri)
+          əlavə edildikcə bu siyasət yenilənə bilər. Yenilənmiş versiya bu səhifədə dərc olunacaq.
+        </p>
       </div>
     </div>
   </section>
+
+  <style is:global>
+    .cookies-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+  </style>
 </BaseLayout>
