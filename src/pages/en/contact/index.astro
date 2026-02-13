@@ -22,14 +22,9 @@ const desc =
           <div style="font-weight:700; margin-bottom:10px;">Contact details</div>
 
           <div style="display:grid; gap:10px;">
-            <div>
-              <div style="font-size:13px; color: var(--muted);">Phone</div>
-              <div style="font-weight:600;">+994 70 857 28 17</div>
-            </div>
-
-            <div>
-              <div style="font-size:13px; color: var(--muted);">WhatsApp</div>
-              <div style="font-weight:600;">+994 70 857 28 17</div>
+              <div>
+              <div style="font-size:13px; color: var(--muted);">Phone/WhatsApp</div>
+              <div style="font-weight:600;">+994 10 725 64 41</div>
             </div>
 
             <div>
@@ -55,7 +50,7 @@ const desc =
 
           <div class="grid grid-auto" style="margin-top:14px; justify-items:center;">
             <a class="btn" href="mailto:info@qualifycert.com" style="width:100%;">Email us</a>
-            <a class="btn" href="tel:+994708572817" style="width:100%;">Call us</a>
+            <a class="btn" href="tel:+994107256441" style="width:100%;">Call us</a>
           </div>
         </div>
 
@@ -63,65 +58,79 @@ const desc =
         <div class="card contact-right">
           <div style="font-weight:700; margin-bottom:10px;">Send an inquiry</div>
 
-          <form method="post">
-            <!-- Form fields: auto grid (2 columns when possible) -->
-            <div class="grid grid-auto form-grid">
-              <div>
-                <label class="field-label" for="name">Name</label>
-                <input id="name" name="name" required class="field" placeholder="Your name" />
-              </div>
+          <form 
+  action="https://formspree.io/f/maqdezen" 
+  method="POST"
+>
+  <!-- Hidden config -->
+  <input type="hidden" name="_subject" value="New inquiry — qualifycert.com" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://qualifycert.com/en/contact/?success=true" />
 
-              <div>
-                <label class="field-label" for="company">Company</label>
-                <input id="company" name="company" class="field" placeholder="Company name" />
-              </div>
+  <!-- Honeypot anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-              <div>
-                <label class="field-label" for="phone">Phone / WhatsApp</label>
-                <input id="phone" name="phone" required class="field" placeholder="+994..." />
-              </div>
+  <div class="grid grid-auto form-grid">
+    <div>
+      <label class="field-label" for="name">Full Name</label>
+      <input id="name" name="name" required class="field" placeholder="Your name" />
+    </div>
 
-              <div>
-                <label class="field-label" for="email">Email</label>
-                <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
-              </div>
+    <div>
+      <label class="field-label" for="company">Company</label>
+      <input id="company" name="company" class="field" placeholder="Company name" />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="topic">Topic</label>
-                <select id="topic" name="topic" class="field field-select">
-                  <option>ISO certification preparation</option>
-                  <option>Audit</option>
-                  <option>Training</option>
-                  <option>ISO 9001</option>
-                  <option>ISO 14001</option>
-                  <option>ISO 45001</option>
-                  <option>ISO 22000 / HACCP</option>
-                </select>
-              </div>
+    <div>
+      <label class="field-label" for="phone">Phone / WhatsApp</label>
+      <input id="phone" name="phone" required class="field" placeholder="+994..." />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  class="field"
-                  style="resize:vertical;"
-                  placeholder="Briefly: industry, number of employees, timeline..."
-                ></textarea>
-              </div>
-            </div>
+    <div>
+      <label class="field-label" for="email">Email</label>
+      <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
+    </div>
 
-            <!-- Actions -->
-            <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
-              <button class="btn primary" type="submit" style="width:100%;">Submit inquiry</button>
-              <a class="btn" href="/en/services/" style="width:100%;">View services</a>
-            </div>
+    <div class="span-2">
+      <label class="field-label" for="topic">Interested in</label>
+      <select id="topic" name="topic" class="field field-select">
+        <option>ISO Certification</option>
+        <option>Audit</option>
+        <option>Training</option>
+        <option>ISO 9001</option>
+        <option>ISO 14001</option>
+        <option>ISO 45001</option>
+        <option>ISO 22000 / HACCP</option>
+      </select>
+    </div>
 
-            <p class="p" style="font-size:13px; margin-top:12px;">
-              By clicking “Submit inquiry”, you agree to the processing of your personal data.
-            </p>
-          </form>
+    <div class="span-2">
+      <label class="field-label" for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        class="field"
+        style="resize:vertical;"
+        placeholder="Short description: industry, number of employees, timeline..."
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
+    <button class="btn primary" type="submit" style="width:100%;">
+      Send Request
+    </button>
+    <a class="btn" href="/en/services/" style="width:100%;">
+      View Services
+    </a>
+  </div>
+
+  <p class="p" style="font-size:13px; margin-top:12px;">
+    By clicking the button, you agree to the processing of personal data.
+  </p>
+</form>
+
         </div>
       </div>
     </div>

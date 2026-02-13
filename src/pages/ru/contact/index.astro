@@ -24,9 +24,9 @@ const desc =
           <div style="display:grid; gap:10px;">
             <div>
               <div style="font-size:13px; color: var(--muted);">Телефон/WhatsApp</div>
-              <div style="font-weight:600;">+994 70 857 28 17</div>
+              <div style="font-weight:600;">+994 10 725 64 41</div>
             </div>
-            
+
             <div>
               <div style="font-size:13px; color: var(--muted);">Email</div>
               <div style="font-weight:600;">info@qualifycert.com</div>
@@ -50,73 +50,86 @@ const desc =
 
           <div class="grid grid-auto" style="margin-top:14px; justify-items:center;">
             <a class="btn" href="mailto:info@qualifycert.com" style="width:100%;">Написать на email</a>
-            <a class="btn" href="tel:+994708572817" style="width:100%;">Позвонить</a>
+            <a class="btn" href="tel:+994107256441" style="width:100%;">Позвонить</a>
           </div>
         </div>
 
         <!-- Right -->
         <div class="card contact-right">
           <div style="font-weight:700; margin-bottom:10px;">Отправить запрос</div>
+<form 
+  action="https://formspree.io/f/maqdezen" 
+  method="POST"
+>
+  <!-- Hidden config -->
+  <input type="hidden" name="_subject" value="Новая заявка — qualifycert.com" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://qualifycert.com/ru/contact/?success=true" />
 
-          <form method="post">
-            <!-- Form fields: auto grid (2 columns when possible) -->
-            <div class="grid grid-auto form-grid">
-              <div>
-                <label class="field-label" for="name">Имя</label>
-                <input id="name" name="name" required class="field" placeholder="Ваше имя" />
-              </div>
+  <!-- Honeypot anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-              <div>
-                <label class="field-label" for="company">Компания</label>
-                <input id="company" name="company" class="field" placeholder="Название компании" />
-              </div>
+  <div class="grid grid-auto form-grid">
+    <div>
+      <label class="field-label" for="name">Имя</label>
+      <input id="name" name="name" required class="field" placeholder="Ваше имя" />
+    </div>
 
-              <div>
-                <label class="field-label" for="phone">Телефон / WhatsApp</label>
-                <input id="phone" name="phone" required class="field" placeholder="+994..." />
-              </div>
+    <div>
+      <label class="field-label" for="company">Компания</label>
+      <input id="company" name="company" class="field" placeholder="Название компании" />
+    </div>
 
-              <div>
-                <label class="field-label" for="email">Email</label>
-                <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
-              </div>
+    <div>
+      <label class="field-label" for="phone">Телефон / WhatsApp</label>
+      <input id="phone" name="phone" required class="field" placeholder="+994..." />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="topic">Тема</label>
-                <select id="topic" name="topic" class="field field-select">
-                  <option>Подготовка к ISO-сертификации</option>
-                  <option>Аудит</option>
-                  <option>Обучение</option>
-                  <option>ISO 9001</option>
-                  <option>ISO 14001</option>
-                  <option>ISO 45001</option>
-                  <option>ISO 22000 / HACCP</option>
-                </select>
-              </div>
+    <div>
+      <label class="field-label" for="email">Email</label>
+      <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="message">Сообщение</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  class="field"
-                  style="resize:vertical;"
-                  placeholder="Кратко: отрасль, количество сотрудников, сроки..."
-                ></textarea>
-              </div>
-            </div>
+    <div class="span-2">
+      <label class="field-label" for="topic">Интересует</label>
+      <select id="topic" name="topic" class="field field-select">
+        <option>ISO сертификация</option>
+        <option>Аудит</option>
+        <option>Обучение</option>
+        <option>ISO 9001</option>
+        <option>ISO 14001</option>
+        <option>ISO 45001</option>
+        <option>ISO 22000 / HACCP</option>
+      </select>
+    </div>
 
-            <!-- Actions -->
-            <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
-              <button class="btn primary" type="submit" style="width:100%;">Отправить запрос</button>
-              <a class="btn" href="/ru/services/" style="width:100%;">Посмотреть услуги</a>
-            </div>
+    <div class="span-2">
+      <label class="field-label" for="message">Сообщение</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        class="field"
+        style="resize:vertical;"
+        placeholder="Краткое описание: сфера, количество сотрудников, сроки..."
+      ></textarea>
+    </div>
+  </div>
 
-            <p class="p" style="font-size:13px; margin-top:12px;">
-              Нажимая «Отправить запрос», вы соглашаетесь на обработку персональных данных.
-            </p>
-          </form>
+  <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
+    <button class="btn primary" type="submit" style="width:100%;">
+      Отправить заявку
+    </button>
+    <a class="btn" href="/ru/services/" style="width:100%;">
+      Посмотреть услуги
+    </a>
+  </div>
+
+  <p class="p" style="font-size:13px; margin-top:12px;">
+    Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+  </p>
+</form>
+
         </div>
       </div>
     </div>

@@ -23,13 +23,8 @@ const desc =
 
           <div style="display:grid; gap:10px;">
             <div>
-              <div style="font-size:13px; color: var(--muted);">Telefon</div>
-              <div style="font-weight:600;">+994 70 857 28 17</div>
-            </div>
-
-            <div>
-              <div style="font-size:13px; color: var(--muted);">WhatsApp</div>
-              <div style="font-weight:600;">+994 70 857 28 17</div>
+              <div style="font-size:13px; color: var(--muted);">Telefon/Whatsapp</div>
+              <div style="font-weight:600;">+994 10 725 64 41</div>
             </div>
 
             <div>
@@ -55,7 +50,7 @@ const desc =
 
           <div class="grid grid-auto" style="margin-top:14px; justify-items:center;">
             <a class="btn" href="mailto:info@qualifycert.com" style="width:100%;">E-poçtla yazın</a>
-            <a class="btn" href="tel:+994708572817" style="width:100%;">Zəng edin</a>
+            <a class="btn" href="tel:+994107256441" style="width:100%;">Zəng edin</a>
           </div>
         </div>
 
@@ -63,65 +58,81 @@ const desc =
         <div class="card contact-right">
           <div style="font-weight:700; margin-bottom:10px;">Sorğu göndərin</div>
 
-          <form method="post">
-            <!-- Form fields: auto grid (2 columns when possible) -->
-            <div class="grid grid-auto form-grid">
-              <div>
-                <label class="field-label" for="name">Ad</label>
-                <input id="name" name="name" required class="field" placeholder="Adınız" />
-              </div>
+          <form 
+  action="https://formspree.io/f/maqdezen"
+  method="POST"
+>
+  <!-- Hidden config -->
+  <input type="hidden" name="_subject" value="Yeni sorğu — qualifycert.com" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://qualifycert.com/contact/?success=true" />
 
-              <div>
-                <label class="field-label" for="company">Şirkət</label>
-                <input id="company" name="company" class="field" placeholder="Şirkət adı" />
-              </div>
+  <!-- Honeypot anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-              <div>
-                <label class="field-label" for="phone">Telefon / WhatsApp</label>
-                <input id="phone" name="phone" required class="field" placeholder="+994..." />
-              </div>
+  <!-- Form fields -->
+  <div class="grid grid-auto form-grid">
+    <div>
+      <label class="field-label" for="name">Ad</label>
+      <input id="name" name="name" required class="field" placeholder="Adınız" />
+    </div>
 
-              <div>
-                <label class="field-label" for="email">Email</label>
-                <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
-              </div>
+    <div>
+      <label class="field-label" for="company">Şirkət</label>
+      <input id="company" name="company" class="field" placeholder="Şirkət adı" />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="topic">Maraqlıdır</label>
-                <select id="topic" name="topic" class="field field-select">
-                  <option>ISO sertifikatlaşdırma</option>
-                  <option>Audit</option>
-                  <option>Təlim</option>
-                  <option>ISO 9001</option>
-                  <option>ISO 14001</option>
-                  <option>ISO 45001</option>
-                  <option>ISO 22000 / HACCP</option>
-                </select>
-              </div>
+    <div>
+      <label class="field-label" for="phone">Telefon / WhatsApp</label>
+      <input id="phone" name="phone" required class="field" placeholder="+994..." />
+    </div>
 
-              <div class="span-2">
-                <label class="field-label" for="message">Mesaj</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  class="field"
-                  style="resize:vertical;"
-                  placeholder="Qısa təsvir: sahə, işçi sayı, müddətlər..."
-                ></textarea>
-              </div>
-            </div>
+    <div>
+      <label class="field-label" for="email">Email</label>
+      <input id="email" name="email" type="email" class="field" placeholder="email@company.com" />
+    </div>
 
-            <!-- Actions -->
-            <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
-              <button class="btn primary" type="submit" style="width:100%;">Sorğunu göndər</button>
-              <a class="btn" href="/services/" style="width:100%;">Xidmətlərə baxın</a>
-            </div>
+    <div class="span-2">
+      <label class="field-label" for="topic">Maraqlıdır</label>
+      <select id="topic" name="topic" class="field field-select">
+        <option>ISO sertifikatlaşdırma</option>
+        <option>Audit</option>
+        <option>Təlim</option>
+        <option>ISO 9001</option>
+        <option>ISO 14001</option>
+        <option>ISO 45001</option>
+        <option>ISO 22000 / HACCP</option>
+      </select>
+    </div>
 
-            <p class="p" style="font-size:13px; margin-top:12px;">
-              “Sorğunu göndər” düyməsini basmaqla şəxsi məlumatların emalına razılıq verirsiniz.
-            </p>
-          </form>
+    <div class="span-2">
+      <label class="field-label" for="message">Mesaj</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        class="field"
+        style="resize:vertical;"
+        placeholder="Qısa təsvir: sahə, işçi sayı, müddətlər..."
+      ></textarea>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="grid grid-auto" style="margin-top:14px; justify-items:center; max-width:520px;">
+    <button class="btn primary" type="submit" style="width:100%;">
+      Sorğunu göndər
+    </button>
+    <a class="btn" href="/services/" style="width:100%;">
+      Xidmətlərə baxın
+    </a>
+  </div>
+
+  <p class="p" style="font-size:13px; margin-top:12px;">
+    “Sorğunu göndər” düyməsini basmaqla şəxsi məlumatların emalına razılıq verirsiniz.
+  </p>
+</form>
+
         </div>
       </div>
     </div>
