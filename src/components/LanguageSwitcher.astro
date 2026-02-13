@@ -1,8 +1,6 @@
 ---
 const { currentLang = "az", currentPath = "/" } = Astro.props;
 
-// Список "известных" путей, чтобы свитчер не уводил на 404.
-// Обновили структуру: убрали /insights и добавили /blog.
 const knownPaths = new Set([
   "/",
   "/services/",
@@ -16,7 +14,6 @@ const knownPaths = new Set([
   "/standards/iso-45001/",
   "/standards/iso-22000/",
   "/standards/haccp/",
-  "/industries/",
   "/blog/",
   "/faq/",
   "/about/",
@@ -24,6 +21,7 @@ const knownPaths = new Set([
   "/privacy/",
   "/cookies/",
   "/thank-you/",
+  "/industries/"
 ]);
 
 const normalizedPath =
@@ -39,23 +37,73 @@ const linkFor = (lang) => {
 };
 ---
 
-<div
-  class="lang-switch"
-  style="
+<div class="lang-dd">
+  <button class="lang-btn" type="button" aria-haspopup="menu">
+    {currentLang.toUpperCase()} <span class="lang-caret" aria-hidden="true">▾</span>
+  </button>
+
+  <div class="lang-menu" role="menu">
+    <a role="menuitem" href={linkFor("az")} class={currentLang === "az" ? "is-active" : ""}>AZ</a>
+    <a role="menuitem" href={linkFor("ru")} class={currentLang === "ru" ? "is-active" : ""}>RU</a>
+    <a role="menuitem" href={linkFor("en")} class={currentLang === "en" ? "is-active" : ""}>EN</a>
+  </div>
+</div>
+
+<style is:global>
+  .lang-dd{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .lang-btn{
     display:inline-flex;
     align-items:center;
-    gap:8px;
-    padding:6px 10px;
-    border-radius:999px;
-    border:1px solid var(--line);
-    background:#fff;
-    font-size:12px;
-    font-weight:600;
-  "
->
-  <a href={linkFor("az")} style={currentLang === "az" ? "color: var(--accent);" : ""}>AZ</a>
-  <span style="opacity:.45;">|</span>
-  <a href={linkFor("ru")} style={currentLang === "ru" ? "color: var(--accent);" : ""}>RU</a>
-  <span style="opacity:.45;">|</span>
-  <a href={linkFor("en")} style={currentLang === "en" ? "color: var(--accent);" : ""}>EN</a>
-</div>
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .lang-caret{ font-size: 11px; opacity:.6; transform: translateY(-1px); }
+
+  .lang-menu{
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 96px;
+    padding: 8px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    display: none;
+    z-index: 70;
+  }
+  .lang-menu a{
+    display:block;
+    padding: 9px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .lang-menu a:hover{
+    border-color: rgba(37,99,235,.18);
+    background: rgba(37,99,235,.04);
+    color: inherit;
+  }
+  .lang-menu a.is-active{
+    background: rgba(37,99,235,.08);
+    border-color: rgba(37,99,235,.18);
+  }
+
+  /* hover + keyboard */
+  .lang-dd:hover .lang-menu,
+  .lang-dd:focus-within .lang-menu{
+    display:block;
+  }
+</style>

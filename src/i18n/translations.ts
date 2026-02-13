@@ -9,6 +9,16 @@ export const translations = {
       about: "Şirkət haqqında",
       contact: "Əlaqə",
       cta: "Təklif alın",
+
+      // ✅ dropdown subpages
+      servicesSub: {
+        certification: "ISO sertifikatlaşdırma",
+        audit: "Audit",
+        training: "Təlim",
+      },
+      industriesSub: {
+        all: "Bütün sahələr",
+      },
     },
     footer: {
       aboutTitle: "QualifyCert",
@@ -35,6 +45,16 @@ export const translations = {
       about: "О компании",
       contact: "Контакты",
       cta: "Получить предложение",
+
+      // ✅ dropdown subpages
+      servicesSub: {
+        certification: "Сертификация ISO",
+        audit: "Аудит",
+        training: "Обучение",
+      },
+      industriesSub: {
+        all: "Все отрасли",
+      },
     },
     footer: {
       aboutTitle: "QualifyCert",
@@ -61,6 +81,16 @@ export const translations = {
       about: "About",
       contact: "Contact",
       cta: "Get a quote",
+
+      // ✅ dropdown subpages
+      servicesSub: {
+        certification: "ISO Certification",
+        audit: "Audit",
+        training: "Training",
+      },
+      industriesSub: {
+        all: "All industries",
+      },
     },
     footer: {
       aboutTitle: "QualifyCert",
